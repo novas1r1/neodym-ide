@@ -1,16 +1,17 @@
 # neodym IDE (alpha)
 
-With the neodym IDE it is possible to easily create App Projects using Ionic. A lot of built in and automatically configured tools help to improve your Code Quality and speed up most of the manual steps coming along with developing an App. A lot of functionality is bundled in an User Interface to guarantee comfortable and fast usage.
+With the neodym IDE it is possible to easily create app projects using the [Ionic SDK](http://ionicframework.com). A lot of built in and automatically configured tools help to improve your code quality and speed up most of the manual steps coming along with developing an app. A lot of functionality is bundled in an user interface to guarantee comfortable and fast usage.
 
 ## Functionality
 
 ### Create a new app project including all configuration
+A new app project can easily be created by entering a name and a target directory as well as selecting a predefined Ionic template. Afterwards a template including all setup and configuration files will be downloaded and all dependencies will automatically be installed.
 
 ### Switch between your app projects
-
-### Install all dependencies with one click
+In the project overview all app projects created with neodym are listed and can be opened to work on them.
 
 ### Edit your app settings
+Editing your settings is now possible via interface.
 
 ### Manage your components easily via interface
 
