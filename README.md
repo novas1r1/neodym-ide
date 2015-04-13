@@ -39,16 +39,18 @@ Afterwards you only need to download the .zip package and start the neodym-ide.e
 
 ## Dependencies
 
-Code analysis is powered by JSHint.
-Karma is used as the test runner.
-Jasmine is used as the testing framework.
+Code analysis is powered by [JSHint](http://jshint.com).
+[Karma](http://karma-runner.github.io) is used as the test runner.
+[Jasmine](http://jasmine.github.io) is used as the testing framework.
+[Istanbul](https://github.com/gotwarlost/istanbul) is used to generate the code coverage.
 
 ## Upcoming features and changes
-### Currently only available for Windows
-### Import of existing Ionic projects
-### Choosing between different code structures
+- Currently only available for Windows
+- Import of existing Ionic projects
+- Choosing between different code structures
 
 ## Known issues
+*Please let us know about your discovered issues!*
 
 ## Support us
 ### Join the open source community
