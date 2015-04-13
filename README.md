@@ -62,4 +62,4 @@ Code analysis is powered by [JSHint](http://jshint.com).
 This project was designed, implemented and evaluated as part of a master thesis by [Verena Zaiser](hhtp:://verena-zaiser.de) working at [aaronprojects GmbH](http://www.aaronprojects.de) in Leonberg, Germany. 
 
 ## License
-neodym IDE is licensed under the MIT Open Source license. For more information, see the LICENSE file in this repository.
+neodym IDE is licensed under the MIT Open Source license.
