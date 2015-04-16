@@ -4,7 +4,7 @@ With the neodym IDE it is possible to easily create app projects using the [Ioni
 
 The neodym IDE is developed using [NW.js](http://nwjs.io) and therefore working on Windows, Linux and Mac OS X. The whole source code is written in JavaScript using [AngularJS](https://angularjs.org/). Up to now there is only a Windows version available, but a Linux and Mac version will follow soon.
 
-The idea of the neodym IDE is based on my (Verena Zaiser) master thesis written at [aaronprojects GmbH](http://www.aaronprojects.de) (Germany) dealing with the "design and implementation of an IDE for an improved development workflow for Ionic-based multi-platform apps". We really excited if this project will be accepted and pushed by the community, therefore we decided to start an open-source project based on this idea and current implemented version. We would love to welcome you in our hopefully growing community and appreciate every helping hand. Of course we are still working on the project as well! 
+The idea of the neodym IDE is based on my (Verena Zaiser) master thesis written at [aaronprojects GmbH](http://www.aaronprojects.de) (Germany) dealing with the "design and implementation of an IDE for an improved development workflow for Ionic-based multi-platform apps". We will be really excited if this project is accepted and pushed by the community, therefore we decided to start an open-source project based on this idea and current implemented version. We would love to welcome you in our hopefully growing community and appreciate every helping hand. Of course we are still working on the project as well! 
 
 Please contact us if you have ANY! questions =)!
 
@@ -35,7 +35,7 @@ Adding new libraries can easily be done by providing an URL of the JavaScript fi
 Maintaining plugins via the command prompt is really hard and time consuming. That's why I built a plugin manager which provides an overview about all installed plugins and tells you which plugin can be updated. Also searching for plugins and displaying the results as well as installing or uninstalling them via click is possible. 
 
 ### Run your tests and have a look at your code coverage
-A testing environment using [Karma](http://karma-runner.github.io/) as the test runner and [Jasmine](http://jasmine.github.io/) as the testing framework is preinstalled and preconfigured by creating a new app project. Runnning tests is really easy by clicking on the "run" button in the test manager view. The results will be displayed using the [karma-htmlfile-reporter](https://www.npmjs.com/package/karma-htmlfile-reporter) as well as a code coverage using [istanbul](https://github.com/gotwarlost/istanbul). Hopefully this will motivate you to write and run some unit tests :)!
+A testing environment using [Karma](http://karma-runner.github.io/) as the test runner and [Jasmine](http://jasmine.github.io/) as the testing framework is preinstalled and preconfigured by creating a new app project. Runnning tests is really easy by clicking on the "run" button in the test manager view. The results will be displayed using the [karma-htmlfile-reporter](https://www.npmjs.com/package/karma-htmlfile-reporter) as well as a code coverage using [istanbul](https://github.com/gotwarlost/istanbul). Hopefully this will motivate you to write and run some unit tests =)!
 
 ### Release your app easily
 
@@ -62,7 +62,7 @@ Code analysis is powered by [JSHint](http://jshint.com).
 
 ## Support us
 ### Join the open source community
-Hopefully some people are interested in joining this project to build up a good working software. Please contact us (directly via GitHub or e-mail) if you are interested in helping me :)!
+Hopefully some people are interested in joining this project to build up a good working software. Please contact us (directly via GitHub or e-mail) if you are interested in helping me =)!
 
 ### Make a donation
 *Coming soon*
@@ -71,7 +71,7 @@ Hopefully some people are interested in joining this project to build up a good 
 *Coming soon*
 
 ## Authors
-This project was designed, implemented and evaluated as part of a master thesis by [Verena Zaiser](hhtp:://verena-zaiser.de) working at [aaronprojects GmbH](http://www.aaronprojects.de) in Leonberg, Germany. 
+This project was designed, implemented and evaluated as part of a master thesis by [Verena Zaiser](http://verena-zaiser.de) working at [aaronprojects GmbH](http://www.aaronprojects.de) in Leonberg, Germany. 
 
 ## License
 neodym IDE is licensed under the MIT Open Source license.
