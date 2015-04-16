@@ -6,7 +6,8 @@
  * Description: This controller lists all existing components and provides the functionality to add new ones.
  */
 angular.module('neodym.controllers')
-.controller('ComponentsOverviewController', ['$scope', '$q', '$mdDialog', '$mdToast', '$animate','FileService', function ($scope, $q, $mdDialog, $mdToast, $animate, FileService) {
+.controller('ComponentsOverviewController', ['$scope', '$q', '$mdDialog', '$mdToast', '$animate','FileService', 
+	function ($scope, $q, $mdDialog, $mdToast, $animate, FileService) {
 
 	// logging
 	var TAG = 'ComponentsOverviewController: ';

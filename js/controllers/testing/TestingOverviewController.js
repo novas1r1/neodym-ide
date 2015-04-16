@@ -6,7 +6,10 @@
  * Description: This controller helps to run tests and display test coverage
  */
 angular.module('neodym.controllers')
-.controller('TestingOverviewController', ['$scope', '$mdToast','TaskService', function ($scope, $mdToast, TaskService) {
+.controller('TestingOverviewController', ['$scope', '$mdToast','TaskService', 
+	function ($scope, $mdToast, TaskService) {
+
+	// logging
 	var TAG = 'TestingOverviewController: ';
 	var gui = require('nw.gui');
 
@@ -21,7 +24,6 @@ angular.module('neodym.controllers')
 	var displayAlertBox = function(type, msg) {
 
 	    toast = $mdToast.show({
-	    	// template: '<md-toast class="toast-'+ type +'">'+ msg +'<md-button ng-click="close()">Close</md-button></md-toast>',
 	    	template: '<md-toast class="toast-'+ type +'">'+ msg + '</md-toast>',
 	    	hideDelay: 6000,
 	    	position: 'bottom right'

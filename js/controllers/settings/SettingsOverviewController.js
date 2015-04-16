@@ -6,7 +6,8 @@
  * Description: This controller helps to manage all project settings.
  */
 angular.module('neodym.controllers')
-.controller('SettingsOverviewController', ['$scope', '$q', '$mdToast', 'ProjectService', 'FileService', function ($scope, $q, $mdToast, ProjectService, FileService) {
+.controller('SettingsOverviewController', ['$scope', '$q', '$mdToast', 'ProjectService', 'FileService', 
+	function ($scope, $q, $mdToast, ProjectService, FileService) {
  	
  	// logging
  	var TAG = "SettingsOverviewController: ";

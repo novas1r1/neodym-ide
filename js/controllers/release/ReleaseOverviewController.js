@@ -6,7 +6,8 @@
  * Description: This controller helps to easily create resources and a release-build for your app store entry.
  */
 angular.module('neodym.controllers')
-.controller('ReleaseOverviewController', ['$scope', '$q', '$mdToast', 'TaskService', 'FileService', function ($scope, $q, $mdToast, TaskService, FileService) {
+.controller('ReleaseOverviewController', ['$scope', '$q', '$mdToast', 'TaskService', 'FileService', 
+	function ($scope, $q, $mdToast, TaskService, FileService) {
 
 	// logging
 	var TAG = 'ReleaseOverviewController: ';

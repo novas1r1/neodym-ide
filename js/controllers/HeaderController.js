@@ -7,7 +7,8 @@
  * needs to be displayed in the navigation.
  */
 angular.module('neodym.controllers')
-	.controller('HeaderController', ['$scope', '$location', 'TaskService', function($scope, $location, TaskService) {
+	.controller('HeaderController', ['$scope', '$location', 'TaskService', 
+	function ($scope, $location, TaskService) {
 
 	// logging variable
 	var TAG = "HeaderController: ";

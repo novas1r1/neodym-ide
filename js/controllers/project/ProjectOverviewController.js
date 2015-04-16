@@ -6,7 +6,8 @@
  * Description: This controller checks for all necessary dependencies and is able to run npm install on click.
  */
 angular.module('neodym.controllers')
-.controller('ProjectOverviewController', ['$scope', '$q', '$mdToast', 'ProjectService', 'TaskService', function($scope, $q, $mdToast, ProjectService, TaskService) {
+.controller('ProjectOverviewController', ['$scope', '$q', '$mdToast', 'ProjectService', 'TaskService', 
+	function ($scope, $q, $mdToast, ProjectService, TaskService) {
 	
 	// logging
 	var TAG = "ProjectOverviewController: ";
