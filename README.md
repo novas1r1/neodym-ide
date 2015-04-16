@@ -62,7 +62,7 @@ Code analysis is powered by [JSHint](http://jshint.com).
 
 ## Support us
 ### Join the open source community
-Hopefully some people are interested in joining this project to built up a good working software. Please contact us (directly via GitHub or e-mail) if you are interested in helping me :)!
+Hopefully some people are interested in joining this project to build up a good working software. Please contact us (directly via GitHub or e-mail) if you are interested in helping me :)!
 
 ### Make a donation
 *Coming soon*
