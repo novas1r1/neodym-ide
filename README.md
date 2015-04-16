@@ -4,9 +4,9 @@ With the neodym IDE it is possible to easily create app projects using the [Ioni
 
 The neodym IDE is developed using [NW.js](http://nwjs.io) and therefore working on Windows, Linux and Mac OS X. The whole source code is written in JavaScript using [AngularJS](https://angularjs.org/). Up to now there is only a Windows version available, but a Linux and Mac version will follow soon.
 
-The idea of the neodym IDE is based on my (Verena Zaiser) master thesis dealing with the "design and implementation of an IDE for an improved development workflow for Ionic-based multi-platform apps". We are really excited if this project will be accepted and pushed by the community, therefore we decided to start an open-source project based on this idea and current implemented version. We would love to welcome you in our hopefully growing community and appreciate every helping hand.
+The idea of the neodym IDE is based on my (Verena Zaiser) master thesis written at [aaronprojects GmbH](http://www.aaronprojects.de) (Germany) dealing with the "design and implementation of an IDE for an improved development workflow for Ionic-based multi-platform apps". We really excited if this project will be accepted and pushed by the community, therefore we decided to start an open-source project based on this idea and current implemented version. We would love to welcome you in our hopefully growing community and appreciate every helping hand.
 
-Please contact me if you have ANY! questions =)!
+Please contact us if you have ANY! questions =)!
 
 ## Functionality
 
@@ -62,7 +62,7 @@ Code analysis is powered by [JSHint](http://jshint.com).
 
 ## Support us
 ### Join the open source community
-Hopefully some people are interested in joining this project to built up a good working software. Please contact me (directly via GitHub or e-mail) if you are interested in helping me :)!
+Hopefully some people are interested in joining this project to built up a good working software. Please contact us (directly via GitHub or e-mail) if you are interested in helping me :)!
 
 ### Make a donation
 *Coming soon*
