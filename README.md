@@ -35,7 +35,7 @@ Adding new libraries can easily be done by providing an URL of the JavaScript fi
 Maintaining plugins via the command prompt is really hard and time consuming. That's why I built a plugin manager which provides an overview about all installed plugins and tells you which plugin can be updated. Also searching for plugins and displaying the results as well as installing or uninstalling them via click is possible. 
 
 ### Run your tests and have a look at your code coverage
-A testing environment using [Karma](http://karma-runner.github.io/) as the test runner and [Jasmine](http://jasmine.github.io/) as the testing framework is preinstalled and preconfigured by creating a new app project. Runnning tests is really easy by clicking on the "run" button in the test manager view. The results will be displayed using the [karma-htmlfile-reporter](https://www.npmjs.com/package/karma-htmlfile-reporter) as well as a code coverage using [istanbul](https://github.com/gotwarlost/istanbul). Hopefully this will motivate you to write and run some unit tests :)!
+A testing environment using [Karma](http://karma-runner.github.io/) as the test runner and [Jasmine](http://jasmine.github.io/) as the testing framework is preinstalled and preconfigured by creating a new app project. Runnning tests is really easy by clicking on the "run" button in the test manager view. The results will be displayed using the [karma-htmlfile-reporter](https://www.npmjs.com/package/karma-htmlfile-reporter) as well as a code coverage using [istanbul](https://github.com/gotwarlost/istanbul). Hopefully this will motivate you to write and run some unit tests =)!
 
 ### Release your app easily
 
@@ -62,7 +62,7 @@ Code analysis is powered by [JSHint](http://jshint.com).
 
 ## Support us
 ### Join the open source community
-Hopefully some people are interested in joining this project to build up a good working software. Please contact us (directly via GitHub or e-mail) if you are interested in helping me :)!
+Hopefully some people are interested in joining this project to build up a good working software. Please contact us (directly via GitHub or e-mail) if you are interested in helping me =)!
 
 ### Make a donation
 *Coming soon*
