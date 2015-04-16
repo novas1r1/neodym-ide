@@ -71,7 +71,7 @@ Hopefully some people are interested in joining this project to built up a good 
 *Coming soon*
 
 ## Authors
-This project was designed, implemented and evaluated as part of a master thesis by [Verena Zaiser](hhtp:://verena-zaiser.de) working at [aaronprojects GmbH](http://www.aaronprojects.de) in Leonberg, Germany. 
+This project was designed, implemented and evaluated as part of a master thesis by [Verena Zaiser](http://verena-zaiser.de) working at [aaronprojects GmbH](http://www.aaronprojects.de) in Leonberg, Germany. 
 
 ## License
 neodym IDE is licensed under the MIT Open Source license.
