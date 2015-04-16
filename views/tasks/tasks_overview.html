@@ -1,0 +1,119 @@
+<!-- 
+/**
+ * Copyright aaronprojects GmbH (www.aaronprojects.de), 2015
+ * Distributed under the MIT License.
+ * (See accompanying file LICENSE or copy at http://opensource.org/licenses/MIT)
+ * Author: Verena Zaiser (verena.zaiser@aaronprojects.de)
+ */
+-->
+<!-- header -->
+<md-toolbar class="md-primary md-hue-2">
+    <div class="md-toolbar-tools">
+      <span class="md-flex">Tasks</span>
+    </div>
+</md-toolbar>
+
+<!-- content -->
+<md-content class="md-padding" ng-init="init()">
+	<md-button class="md-raised md-primary" ng-click="showAddTaskDialog($event)">Add task</md-button> <br> <br>
+
+	<!-- webview tasks -->
+	<md-toolbar class="md-primary md-hue-2">
+		<div class="md-toolbar-tools">
+			<span class="md-flex">Webview</span>
+		</div>
+	</md-toolbar>
+	<md-list>
+		<md-item ng-repeat="webview in taskList | filter:{platform: 'webview'} track by $index">
+			<div class="fullwidth">
+				<div class="float-right">
+					<md-button class="md-fab md-primary" aria-label="delete" ng-click="deleteTask(webview)" ng-hide="webview.systemtask">
+			            <md-icon md-svg-src="bower_components/material-design-icons/action/svg/design/ic_delete_24px.svg"></md-icon>
+			        </md-button>
+					<md-button class="md-fab md-primary md-primary" aria-label="run" ladda="runButton" ng-click="runTask(webview)">
+			            <md-icon md-svg-src="bower_components/material-design-icons/av/svg/design/ic_play_arrow_24px.svg"></md-icon>
+			        </md-button>
+		        </div>
+		        <div>
+					<span class="item-names">{{webview.name}}</span><br>
+					<span style="font-style:italic">{{webview.description}}</span>
+				</div>
+			</div>
+		</md-item>
+</md-list>
+
+<!-- android tasks -->
+<md-toolbar class="md-primary md-hue-2">
+	<div class="md-toolbar-tools">
+		<span class="md-flex">Android</span>
+	</div>
+</md-toolbar>
+<md-list>
+	<md-item ng-repeat="androidTask in taskList | filter:{platform: 'android'} track by $index">
+	<div class="fullwidth">
+		<div class="float-right">
+			<md-button class="md-fab md-primary" aria-label="delete" ng-click="deleteTask(androidTask)" ng-hide="androidTask.systemtask">
+	            <md-icon md-svg-src="bower_components/material-design-icons/action/svg/design/ic_delete_24px.svg"></md-icon>
+	        </md-button>
+			<md-button class="md-fab md-primary" aria-label="run" ladda="runButton" ng-click="runTask(androidTask)">
+	            <md-icon md-svg-src="bower_components/material-design-icons/av/svg/design/ic_play_arrow_24px.svg"></md-icon>
+	        </md-button>
+        </div>
+		<div>
+			<span class="item-names">{{androidTask.name}}</span> <br>
+			<span style="font-style:italic">{{androidTask.description}}</span>
+		</div>
+	</div>
+	</md-item>
+</md-list>
+
+<!-- ios tasks -->
+<md-toolbar class="md-primary  md-hue-2">
+	<div class="md-toolbar-tools">
+		<span class="md-flex">iOS</span>
+	</div>
+</md-toolbar>
+<md-list>
+	<md-item ng-repeat="iosTask in taskList | filter:{platform: 'ios'} track by $index">
+		<div class="fullwidth">
+			<div class="float-right">
+				<md-button class="md-fab md-primary" aria-label="delete" ng-click="deleteTask(iosTask)" ng-hide="iosTask.systemtask">
+		            <md-icon md-svg-src="bower_components/material-design-icons/action/svg/design/ic_delete_24px.svg"></md-icon>
+		        </md-button>
+				<md-button class="md-fab md-primary" aria-label="run" ladda="runButton" ng-click="runTask(iosTask)">
+		            <md-icon md-svg-src="bower_components/material-design-icons/av/svg/design/ic_play_arrow_24px.svg"></md-icon>
+		        </md-button>
+	        </div>
+	        <div>
+	        	<span class="item-names">{{iosTask.name}}</span> <br>
+	        	<span style="font-style:italic">{{iosTask.description}}</span>
+	        </div>
+		</div>
+	</md-item>
+</md-list>
+
+<!-- custom tasks -->
+<md-toolbar class="md-primary  md-hue-2">
+	<div class="md-toolbar-tools">
+		<span class="md-flex">Custom</span>
+	</div>
+</md-toolbar>
+<md-list>
+	<md-item ng-repeat="customTask in taskList | filter:{platform: 'custom'} track by $index">
+		<div class="fullwidth">
+			<div class="float-right">
+				<md-button class="md-fab md-primary" aria-label="delete" ng-click="deleteTask(customTask)" ng-hide="customTask.systemtask">
+		            <md-icon md-svg-src="bower_components/material-design-icons/action/svg/design/ic_delete_24px.svg"></md-icon>
+		        </md-button>
+				<md-button class="md-fab md-primary" aria-label="run" ladda="runButton" ng-click="runTask(customTask)">
+		            <md-icon md-svg-src="bower_components/material-design-icons/av/svg/design/ic_play_arrow_24px.svg"></md-icon>
+		        </md-button>
+	        </div>
+			<div>
+				<span class="item-names">{{customTask.name}}</span> <br>
+				<span style="font-style:italic">{{customTask.description}}</span>
+			</div>
+		</div>
+	</md-item>
+</md-list>
+<md-content>

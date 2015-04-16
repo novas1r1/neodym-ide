@@ -1,0 +1,6 @@
+{
+    "cmd": ["nw.exe", "--enable-logging", "${project_path:${file_path}}"],
+    "working_dir": "${project_path:${file_path}}",
+    "path": "C:/Anwendungen/node-webkit-v0.11.0-rc1-win-x64",
+    "shell": true
+}

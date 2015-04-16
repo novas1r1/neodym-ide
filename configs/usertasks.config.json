@@ -1,0 +1,18 @@
+[
+    {
+        "id": 9,
+        "platform": "webview",
+        "name": "dfsfsd",
+        "description": "fdsfsd",
+        "systemtask": false,
+        "command": "fsdfsdfsd"
+    },
+    {
+        "id": 10,
+        "platform": "webview",
+        "name": "dasdsad",
+        "description": "dasdsada",
+        "systemtask": false,
+        "command": "dasdsadas"
+    }
+]

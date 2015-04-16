@@ -1,0 +1,34 @@
+<!-- 
+/**
+ * Copyright aaronprojects GmbH (www.aaronprojects.de), 2015
+ * Distributed under the MIT License.
+ * (See accompanying file LICENSE or copy at http://opensource.org/licenses/MIT)
+ * Author: Verena Zaiser (verena.zaiser@aaronprojects.de)
+ */
+-->
+<md-dialog aria-label="Add new component">
+	<md-toolbar class="md-primary md-hue-2">
+		<div class="md-toolbar-tools">
+			Add new component
+		</div>
+	</md-toolbar>
+	<md-content>
+		<p>New components are added to your root component directory depending on the type (controllers/TestController). <br>
+		You can create subdirectories as well by entering the name of the folder like (folder1/folder2/file1)</p>
+		<md-input-container flex>
+			<label>Name</label>
+			<input ng-model="component.name">
+		</md-input-container>
+		
+		<md-radio-group class="md-primary" ng-model="component.type">
+			<md-radio-button class="md-primary" value="controllers">Controller</md-radio-button>
+			<md-radio-button class="md-primary" value="services">Service</md-radio-button>
+			<md-radio-button class="md-primary" value="directives">Directive</md-radio-button>
+			<md-radio-button class="md-primary" value="filters">Filter</md-radio-button>
+		</md-radio-group>
+	</md-content>
+	<div class="md-actions" layout="row">
+		<md-button ng-click="hide()">Cancel</md-button>
+		<md-button ng-click="answer(component)" class="md-primary">Add</md-button>
+	</div>
+</md-dialog>

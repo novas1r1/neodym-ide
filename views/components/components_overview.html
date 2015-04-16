@@ -1,0 +1,123 @@
+<!-- 
+/**
+ * Copyright aaronprojects GmbH (www.aaronprojects.de), 2015
+ * Distributed under the MIT License.
+ * (See accompanying file LICENSE or copy at http://opensource.org/licenses/MIT)
+ * Author: Verena Zaiser (verena.zaiser@aaronprojects.de)
+ */
+-->
+<!-- header -->
+<md-toolbar class="md-primary md-hue-2" ng-init="init()">
+	<div class="md-toolbar-tools">
+	  <span class="md-flex">Components</span>
+	</div>
+</md-toolbar>
+
+<!-- content -->
+<md-content class="md-padding">
+	<md-button class="md-raised md-primary" ng-click="showAddComponentDialog($event)">Add component</md-button> <br> <br>
+
+	<!-- controllers -->
+	<md-toolbar class="md-primary md-hue-2">
+		<div class="md-toolbar-tools">
+			<span class="md-flex">Controllers</span>
+		</div>
+	</md-toolbar>
+	<md-list>
+		<!-- no controllers available -->
+		<div class="text-content" ng-show="controllerList.length <= 0">
+			<em>No controllers available</em>
+		</div>
+		<!-- controllers available -->
+		<md-item ng-repeat="controller in controllerList track by $index">
+			<div class="fullwidth">
+				<div class="float-right">
+					<md-button class="md-fab md-primary" aria-label="delete" ng-click="deleteComponent('controllers', controller.name)">
+						<md-icon md-svg-src="bower_components/material-design-icons/action/svg/design/ic_delete_24px.svg"></md-icon>
+					</md-button>
+				</div>
+				<div>
+					<div class="item-names">{{controller.name}}</div>
+				</div>
+			</div>
+			</md-item>
+	</md-list>
+
+	<!-- services -->
+	<md-toolbar class="md-primary md-hue-2">
+		<div class="md-toolbar-tools">
+			<span class="md-flex">Services</span>
+		</div>
+	</md-toolbar>
+	<md-list>
+		<!-- no services available -->
+		<div class="text-content" ng-show="serviceList.length <= 0">
+			<em>No services available</em>
+		</div>
+		<!-- services available -->
+		<md-item ng-repeat="service in serviceList track by $index">
+			<div class="fullwidth">
+				<div class="float-right">
+					<md-button class="md-fab md-primary" aria-label="delete" ng-click="deleteComponent('services', service.name)">
+						<md-icon md-svg-src="bower_components/material-design-icons/action/svg/design/ic_delete_24px.svg"></md-icon>
+					</md-button>
+				</div>
+				<div>
+					<div class="item-names">{{service.name}}</div>
+				</div>
+			</div>
+		</md-item>
+	</md-list>
+
+	<!-- filters -->
+	<md-toolbar class="md-primary md-hue-2">
+		<div class="md-toolbar-tools">
+			<span class="md-flex">Filters</span>
+		</div>
+	</md-toolbar>
+	<md-list>
+		<!-- no filters available -->
+		<div class="text-content" ng-show="filterList.length <= 0">
+			<em>No filters available</em>
+		</div>
+		<!-- filters available -->
+		<md-item ng-repeat="filter in filterList track by $index">
+			<div class="fullwidth">
+				<div class="float-right">
+					<md-button class="md-fab md-primary" aria-label="delete" ng-click="deleteComponent('filters', filter.name)">
+						<md-icon md-svg-src="bower_components/material-design-icons/action/svg/design/ic_delete_24px.svg"></md-icon>
+					</md-button>
+				</div>
+				<div>
+					<div class="item-names">{{filter.name}}</div>
+				</div>
+			</div>
+		</md-item>
+	</md-list>
+
+	<!-- directives -->
+	<md-toolbar class="md-primary md-hue-2">
+		<div class="md-toolbar-tools">
+			<span class="md-flex">Directives</span>
+		</div>
+	</md-toolbar>
+	<md-list>
+		<!-- no directives available -->
+		<div class="text-content" ng-show="directiveList.length <= 0">
+			<em>No directives available</em>
+		</div>
+		<!-- directives available -->
+		<md-item ng-repeat="directive in directiveList track by $index">
+			<div class="fullwidth">
+				<div class="float-right">
+					<md-button class="md-fab md-primary" aria-label="delete" ng-click="deleteComponent('directives', directive.name)">
+						<md-icon md-svg-src="bower_components/material-design-icons/action/svg/design/ic_delete_24px.svg"></md-icon>
+					</md-button>
+				</div>
+				<div>
+					<div class="item-names">{{directive.name}}</div>
+				</div>
+			</div>
+		</md-item>
+	</md-list>
+<md-content>

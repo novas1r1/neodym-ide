@@ -1,0 +1,32 @@
+[
+    {
+        "id": 1,
+        "title": "testproject",
+        "description": "",
+        "path": "C:\\Users\\vzaiser\\Desktop\\PROJEKTE/testproject",
+        "timestamp": "2015-04-08T11:08:28.331Z",
+        "version": "0.0.1",
+        "android": false,
+        "ios": false
+    },
+    {
+        "id": 2,
+        "title": "nochmaleintest",
+        "description": "",
+        "path": "C:\\Users\\vzaiser\\Desktop\\PROJEKTE/nochmaleintest",
+        "timestamp": "2015-04-08T13:34:17.488Z",
+        "version": "0.0.1",
+        "android": true,
+        "ios": false
+    },
+    {
+        "id": 3,
+        "title": "testdahsjk",
+        "description": "dawdaw",
+        "path": "C:\\Users\\vzaiser\\Desktop\\PROJEKTE/testdahsjk",
+        "timestamp": "2015-04-16T14:34:17.784Z",
+        "version": "0.0.1",
+        "android": false,
+        "ios": false
+    }
+]

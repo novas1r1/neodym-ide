@@ -1,0 +1,66 @@
+[
+    {
+        "id": 1,
+        "platform": "webview",
+        "name": "Start webview",
+        "description": "View your app in your browser",
+        "systemtask": true,
+        "command": "ionic serve"
+    },
+    {
+        "id": 2,
+        "platform": "android",
+        "name": "Build android apk",
+        "description": "Only possible if android platform was added.",
+        "systemtask": true,
+        "command": "ionic run android"
+    },
+    {
+        "id": 3,
+        "platform": "custom",
+        "name": "Update ionic cli",
+        "description": "Updates your global ionic cli",
+        "systemtask": true,
+        "command": "npm update -g ionic"
+    },
+    {
+        "id": 4,
+        "platform": "android",
+        "name": "Add android platform",
+        "description": "Needed for building android apps",
+        "systemtask": true,
+        "command": "cordova platform add android"
+    },
+    {
+        "id": 5,
+        "platform": "android",
+        "name": "Remove android platform",
+        "description": "Removes installed android platform",
+        "systemtask": true,
+        "command": "cordova platform remove android"
+    },
+    {
+        "id": 6,
+        "platform": "ios",
+        "name": "Add ios platform",
+        "description": "Needed for building ios apps. Working on a Mac and using xcode as a requirement.",
+        "systemtask": true,
+        "command": "cordova platform add ios"
+    },
+    {
+        "id": 7,
+        "platform": "ios",
+        "name": "Remove ios platform",
+        "description": "Removes installed ios platform",
+        "systemtask": true,
+        "command": "cordova platform remove ios"
+    },
+    {
+        "id": 8,
+        "platform": "custom",
+        "name": "Update project dependencies",
+        "description": "Updates all project dependencies using 'npm install'",
+        "systemtask": true,
+        "command": "npm install"
+    }
+]

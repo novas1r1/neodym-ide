@@ -1,0 +1,23 @@
+// TESTING TEMPLATES
+
+/**
+ * spyOn success
+ * @param  {[type]} input [description]
+ * @return {[type]}       [description]
+ */
+spyOn(ProjectService, 'getAllProjects').and.callFake( function(input) {
+	var deferred = $q.defer();
+	deferred.resolve('Worked');
+	return deferred.promise;
+});
+
+/**
+ * spyOn fail
+ * @param  {[type]} input [description]
+ * @return {[type]}       [description]
+ */
+spyOn(ProjectService, 'getAllProjects').and.callFake( function(input) {
+	var deferred = $q.defer();
+	deferred.reject('Failed');
+	return deferred.promise;
+});

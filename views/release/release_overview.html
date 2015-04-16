@@ -1,0 +1,84 @@
+<!-- 
+/**
+ * Copyright aaronprojects GmbH (www.aaronprojects.de), 2015
+ * Distributed under the MIT License.
+ * (See accompanying file LICENSE or copy at http://opensource.org/licenses/MIT)
+ * Author: Verena Zaiser (verena.zaiser@aaronprojects.de)
+ */
+-->
+<!-- header -->
+<md-toolbar class="md-primary md-hue-2" ng-init="init()">
+	<div class="md-toolbar-tools">
+	  <span class="md-flex">Release Manager</span>
+	</div>
+</md-toolbar>
+
+<!-- content -->
+<md-content class="md-padding">
+	<md-toolbar class="md-primary md-hue-2">
+		<div class="md-toolbar-tools">
+			<span class="md-flex">Generate resources</span>
+		</div>
+	</md-toolbar>
+	<p>Allowed files: png, psd, ai. Your generated resources will be stored in the resources folder in your project. Resources are only generated for installed platforms.</p>
+	<div layout="row">
+		<div>
+			<md-input-container>
+			<input type="file" onchange="angular.element(this).scope().setIconResource(this)" accept=".png, .psd, .ai"/>
+		</md-input-container>
+		</div>
+		<div>
+			<md-button class="add-tab md-primary" ng-click="uploadResources('icon')">Add logo file</md-button>
+		</div>
+	</div>
+	<div layout="row">
+	<div>
+		<md-input-container>
+			<input type="file" onchange="angular.element(this).scope().setSplashResource(this)" accept=".png, .psd, .ai"/>
+		</md-input-container>
+	</div>
+		<div>
+			<md-button class="add-tab md-primary" ng-click="uploadResources('splash')">Add splashscreen file</md-button>
+		</div>
+	</div>
+	<md-button class="md-raised md-primary" ladda="generateButton" ng-click="generateResources()">Generate</md-button>
+
+</md-content>
+<md-content class="md-padding">
+
+	<!-- generate release-build -->
+	<md-toolbar class="md-primary md-hue-2">
+		<div class="md-toolbar-tools">
+			<span class="md-flex">Generate release-build</span>
+		</div>
+	</md-toolbar>
+	<p>Currently only available for android</p>
+
+	<!-- apk name -->
+	<md-input-container class="md-primary">
+		<label>APK Name</label>
+		<input name="apkName" ng-model="apkName" required>
+	</md-input-container>
+
+	<!-- alias name -->
+	<md-input-container class="md-primary">
+		<label>Alias Name</label>
+		<input name="aliasName" ng-model="aliasName" required>
+	</md-input-container>
+
+	<!-- password -->
+	<md-input-container class="md-primary">
+		<label>Password</label>
+		<input type="password" name="password" ng-model="password" required>
+	</md-input-container>
+
+	<md-button class="md-raised md-primary" ladda="generateBuildButton" ng-click="generateReleaseBuild()">Generate</md-button>
+
+<md-content>
+
+
+
+
+
+
+
