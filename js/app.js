@@ -8,10 +8,15 @@ neodym =
 
 angular.module('neodym', ['ngResource', 'ngRoute', 'ngAnimate', 'ngMaterial', 'angular-ladda', 'neodym.controllers', 'neodym.services', 'neodym.directives', 'neodym.filters'])
 
-.config(function ($routeProvider, laddaProvider) {
+.config(function ($routeProvider, laddaProvider, $mdThemingProvider) {
     laddaProvider.setOption({ 
         style: 'zoom-in'
     });
+    $mdThemingProvider
+        .theme('default')
+        .primaryPalette('blue-grey')
+        .accentPalette('teal');
+    
     $routeProvider
         .when('/home', {
             templateUrl: 'views/home/home_overview.html',
