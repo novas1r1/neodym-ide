@@ -22,8 +22,8 @@ module.exports = function(karma) {
         'js/lib/angular-resource.min.js',
         'js/lib/angular-route.min.js',
         'js/lib/xml2json.min.js',
-        'node_modules/angular-mocks/angular-mocks.js',
         'js/lib/jquery.min.js',
+        'node_modules/angular-mocks/angular-mocks.js',
 
         'tests/unit/**/**/*.spec.js',
     ],
@@ -41,39 +41,36 @@ module.exports = function(karma) {
     coverageReporter: {
       type: 'html',
       dir: 'tests/coverage/',
+      subdir: 'html',
       file: 'coverage.html'
     },
 
+    htmlReporter : {
+        outputFile: 'tests/results.html'
+    },
+    
     // test results reporter to use
     // possible values: 'dots', 'progress'
     // available reporters: https://npmjs.org/browse/keyword/karma-reporter
     reporters: ['progress', 'coverage', 'html'],
 
-    htmlReporter : {
-        outputFile: 'tests/results.html'
-    }
 
     // web server port
     port: 9876,
 
-
     // enable / disable colors in the output (reporters and logs)
     colors: true,
-
 
     // level of logging
     // possible values: config.LOG_DISABLE || config.LOG_ERROR || config.LOG_WARN || config.LOG_INFO || config.LOG_DEBUG
     logLevel: karma.LOG_DEBUG,
 
-
     // enable / disable watching file and executing tests whenever any file changes
     autoWatch: true,
-
 
     // start these browsers
     // available browser launchers: https://npmjs.org/browse/keyword/karma-launcher
     browsers: ['Chrome'],
-
 
     // Continuous Integration mode
     // if true, Karma captures browsers, runs the tests and exits
