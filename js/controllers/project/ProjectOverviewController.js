@@ -110,7 +110,6 @@ angular.module('neodym.controllers')
 		// add android if android was selected
 		if($scope.currentProject.android == true) {
 
-			console.log("BIN DRIN");
 			TaskService.executeTask("cordova platform add android", localStorage.currentProjectPath).then(function (result) {
 				$scope.dependencies[5].installed = true;
 			}, function (failure) {
@@ -148,7 +147,7 @@ angular.module('neodym.controllers')
 
 		TaskService.executeTask("npm install", localStorage.currentProjectPath).then(function (result) {
 			$scope.installButton = false;
-			$scope.checkIfInstalled();
+			$scope.init();
 			displayAlertBox("success", result.msg);
 		}, function (failure) {
 			$scope.installButton = false;

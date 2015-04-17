@@ -14,7 +14,7 @@ angular.module('neodym.controllers')
 	var gui = require('nw.gui');
 
 	$scope.testResults = localStorage.currentProjectPath +"/www/tests/results.html";
-	$scope.testCoverage = localStorage.currentProjectPath +"/www/tests/coverage/Chrome 41.0.2272 (Windows 7)/index.html";
+	$scope.testCoverage = localStorage.currentProjectPath +"/www/tests/coverage/html/index.html";
 
 	/**
 	 * Display alert or success box
@@ -41,6 +41,7 @@ angular.module('neodym.controllers')
 		TaskService.executeTask("grunt test", localStorage.currentProjectPath).then(function (result) {
 			$scope.runButton = false;
 			displayAlertBox("success", result.msg);
+			$scope.init();
 		}, function (failure) {
 			$scope.runButton = false;
 			displayAlertBox("error", failure.msg);

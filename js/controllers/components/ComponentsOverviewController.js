@@ -278,7 +278,7 @@ angular.module('neodym.controllers')
 										var filePath = localStorage.currentProjectPath + "/www/tests/unit/" + componentType + "/" + componentName + ".spec.js";
 										FileService.createFile(testFilePath).then(function (result) {
 											displayAlertBox("success", result.msg);
-											$scope.showCustomToast();
+											$scope.init();
 										}, function (failure) {
 											displayAlertBox("error", failure.msg);
 										});

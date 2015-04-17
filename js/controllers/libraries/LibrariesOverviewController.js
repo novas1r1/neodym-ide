@@ -170,6 +170,7 @@ angular.module('neodym.controllers')
     	FileService.downloadFile(url, destination, libraryName).then(function (result) {
     		addLibraryReference(libraryName).then(function (result) {
 				displayAlertBox("success", result.msg);
+				$scope.init();
     		}, function (failure) {
     			displayAlertBox("error", failure);
     		});

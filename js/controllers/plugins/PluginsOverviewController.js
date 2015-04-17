@@ -268,6 +268,7 @@ angular.module('neodym.controllers')
 		TaskService.executeTask("cordova plugin add " + pluginToInstall.name, localStorage.currentProjectPath).then(function (result) {
 			$scope.installButton = false;
 			displayAlertBox("success", "Plugin " + pluginToInstall.name + " successfully added.");
+			$scope.init();
 		}, function (failure) {
 			$scope.installButton = false;
 			displayAlertBox("error", "Error: Installing plugin " + pluginToInstall.name + " failed." + failure.msg);
