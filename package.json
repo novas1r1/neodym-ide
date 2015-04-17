@@ -41,10 +41,13 @@
     "page-cache": false
   },
   "dependencies": {
+    "bower": "^1.4.1",
     "grunt": "^0.4.5",
     "karma": "^0.12.31"
   },
-  "scripts": {},
+  "scripts": {
+    "postinstall" : "node_modules/.bin/bower install"
+    },
   "keywords": [
     "hybrid",
     "app",
