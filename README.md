@@ -39,11 +39,21 @@ A testing environment using [Karma](http://karma-runner.github.io/) as the test 
 
 ### Release your app easily
 
+**in progress**
+
 ## Installation
 
 The [Ionic SDK](http://ionicframework.com) has to be successfully installed and configured to use the neodym IDE. If you are not familiar with Ionic, please have a look at its [official documentation](http://ionicframework.com/docs/).
 
-Afterwards you only need to download the .zip package and start the neodym-ide.exe to run the IDE. A packaged version will also be available soon after some issues will be fixed. At the moment it takes horribly long to start the packaged version.
+[Node.js](https://nodejs.org/), [npm](https://www.npmjs.com/package/npm) and [Git](http://git-scm.com/) have to be installed as well. If you discover other dependencies which are not mentioned here, please let me know.
+
+Afterwards you only need to download the .zip package and extract it to your desired location. Then please open the command prompt, navigate into the directory and run (only needed for the first start of the IDE):
+
+`npm install`
+
+This will download all needed dependencies and may take a while. After this is finished you can start the IDE by running the "neodym-ide.exe". 
+
+A packaged version will also be available soon after some issues will be fixed. At the moment it takes horribly long to start the packaged version.
 
 ## Dependencies
 
