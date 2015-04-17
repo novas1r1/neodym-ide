@@ -12,8 +12,6 @@ angular.module('neodym.controllers')
 	// logging
 	var TAG = "TasksOverviewController: ";
 
-	var taskConfigPath = './configs/tasks.config.json';
-
 	var userTasksConfigPath = './configs/usertasks.config.json';
 	var systemTasksConfigPath = './configs/systemtasks.config.json';
 
@@ -192,7 +190,7 @@ angular.module('neodym.controllers')
  				var stopIt = true;
  				$scope.taskList.splice(i, 1);
 
- 				saveConfig(taskConfigPath, $scope.taskList).then(function (result) {
+ 				saveConfig(userTasksConfigPath, $scope.taskList).then(function (result) {
  					console.log(result);
 					$scope.successMessage = "Task '" + taskToDelete.name + "' deleted.";
 					$("#successBox").show();
