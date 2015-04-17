@@ -92,25 +92,8 @@ angular.module('neodym.controllers')
 		//show loading spinner
 		$scope.createButton = true;
 
-		//use app-template depending on users choice
-		var selectedTemplate;
-		switch($scope.project.template) {
-			case "blank":
-			selectedTemplate = "blank-template";
-			break;
-			case "sidemenu":
-			selectedTemplate = "sidemenu-template";
-			break;
-			case "tabs":
-			selectedTemplate = "tabs-template";
-			break;
-			default:
-			console.error("no template selected");
-			break;
-		}
-
 		//get template repository from git
-		var repositoryURL = "http://masterthesisdevelop:123456@intern.aaronprojects.de:5000/aap/ionic-app-templates/" + selectedTemplate;
+		var repositoryURL = "https://github.com/aaronprojects/neodym-apptemplate-"+ $scope.project.template + ".git";
 		var destination = $scope.project.path + $scope.project.title;
 
 		//create folder for new project
