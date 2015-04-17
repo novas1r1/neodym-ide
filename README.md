@@ -39,7 +39,7 @@ A testing environment using [Karma](http://karma-runner.github.io/) as the test 
 
 ### Release your app easily
 
-**in progress**
+*in progress*
 
 ## Installation
 
@@ -61,6 +61,12 @@ Code analysis is powered by [JSHint](http://jshint.com).
 [Karma](http://karma-runner.github.io) is used as the test runner.
 [Jasmine](http://jasmine.github.io) is used as the testing framework.
 [Istanbul](https://github.com/gotwarlost/istanbul) is used to generate the code coverage.
+
+The existing templates from Ionic (blank, sidemenu, tabs) are used and extended by a basic component structure, a grunt and a karma configuration file. These templates are also available on github. Feel free to improve them!
+
+[neodym-blank-template](https://github.com/aaronprojects/neodym-apptemplate-blank)
+[neodym-sidemenu-template](https://github.com/aaronprojects/neodym-apptemplate-sidemenu)
+[neodym-tabs-template](https://github.com/aaronprojects/neodym-apptemplate-tabs)
 
 ## Upcoming features and changes
 - Currently only available for Windows -> will be available for Linux and Mac OS X soon
