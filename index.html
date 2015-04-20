@@ -13,18 +13,21 @@
      <section layout="row" flex>
 		<md-sidenav layout="column" style="overflow: hidden; display: flex;" class="md-sidenav-left md-whiteframe-z2" md-component-id="left" md-is-locked-open="$mdMedia('gt-sm')">
 		    <md-toolbar class="md-primary md-hue-2">
-                <div class="sidemenu-title">neodym IDE<br> 
-                    <span style="font-size: 7pt">{{currentProject}}</span> <br>
-                    <img class="sidemenu-icon" ng-src="bower_components/material-design-icons/hardware/svg/design/ic_keyboard_control_24px.svg" ng-click="openShell()">
-                    <img class="sidemenu-icon" ng-src="bower_components/material-design-icons/file/svg/design/ic_folder_open_24px.svg" ng-click="openFolder()">
-                </div>
+                <div class="sidemenu-logo"></div>
+                
 		    </md-toolbar>
 		    <md-content>
 		      <div ng-repeat="item in items">
 		        <button class="menu-item menu-title md-menu-item" ng-class="item.active" ng-click="setActive(item)" md-highlight="menu.isSectionSelected(item)" md-ink-ripple="#bbb">
-				    <img class="sidemenu-icon" ng-src="bower_components/material-design-icons/{{item.icon}}">{{item.name}}
+                    <md-icon md-svg-src="bower_components/material-design-icons/{{item.icon}}" class="s24" alt="Cake"></md-icon>{{item.name}}
 		        </button>
 		      </div>
+              <div class="sidemenu-footer"> 
+                  <!-- <img class="sidemenu-icon" ng-src="bower_components/material-design-icons/hardware/svg/design/ic_keyboard_control_24px.svg" ng-click="openShell()"> -->
+                  <div ng-click="openFolder()">
+                    <md-button class="md-raised md-primary" ng-click="openFolder()">Open project in explorer</md-button>
+                  </div>
+              </div>
 		    </md-content>
 		  </md-sidenav>
        </md-sidenav>

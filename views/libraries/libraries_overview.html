@@ -50,18 +50,16 @@
 
 	<!-- libraries found -->
 	<md-item ng-repeat="library in libraryList track by $index">
-	<div class="fullwidth">
-		<div class="float-right">
-			<md-button class="md-fab md-primary" aria-label="delete" ng-click="deleteLibrary(library)">
-	            <md-icon md-svg-src="bower_components/material-design-icons/action/svg/design/ic_delete_24px.svg"></md-icon>
-	        </md-button>
-        </div>
-		<div>
-			<span class="item-names">{{library.name}}</span><br>
-			<span id="helpBlock" class="help-block">This is a test description for the added library.</span>
+		<div class="fullwidth">
+			<div class="float-right">
+				<md-button class="md-fab md-primary" aria-label="delete" ng-click="deleteLibrary(library)">
+		            <md-icon md-svg-src="bower_components/material-design-icons/action/svg/design/ic_delete_24px.svg"></md-icon>
+		        </md-button>
+	        </div>
+	        <div class="item-names-double">{{library.name}}<br>
+	        	<span style="font-style:italic; font-size: 14px">This is a test description for the added library.</span>
+	        </div>
 		</div>
-	</div>
 	</md-item>
 </md-list>
-
 <md-content>

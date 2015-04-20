@@ -41,7 +41,7 @@ angular.module('neodym.controllers')
 	},
 	{
 		name: "Components",
-		icon: "action/design/svg/ic_list_24px.svg",
+		icon: "action/svg/design/ic_list_24px.svg",
 		active: "",
 		view: "/components"
 	},

@@ -35,13 +35,13 @@
 			        </md-button>
 		        </div>
 		        <div>
-					<span class="item-names">{{webview.name}}</span><br>
-					<span style="font-style:italic">{{webview.description}}</span>
+					<div class="item-names">{{webview.name}}<br>
+						<span style="font-style:italic; font-size: 14px">{{webview.description}}</span>
+					</div>
 				</div>
 			</div>
 		</md-item>
 </md-list>
-
 <!-- android tasks -->
 <md-toolbar class="md-primary md-hue-2">
 	<div class="md-toolbar-tools">
@@ -59,9 +59,8 @@
 	            <md-icon md-svg-src="bower_components/material-design-icons/av/svg/design/ic_play_arrow_24px.svg"></md-icon>
 	        </md-button>
         </div>
-		<div>
-			<span class="item-names">{{androidTask.name}}</span> <br>
-			<span style="font-style:italic">{{androidTask.description}}</span>
+		<div class="item-names">{{androidTask.name}}<br>
+			<span style="font-style:italic; font-size: 14px">{{androidTask.description}}</span>
 		</div>
 	</div>
 	</md-item>
@@ -84,10 +83,9 @@
 		            <md-icon md-svg-src="bower_components/material-design-icons/av/svg/design/ic_play_arrow_24px.svg"></md-icon>
 		        </md-button>
 	        </div>
-	        <div>
-	        	<span class="item-names">{{iosTask.name}}</span> <br>
-	        	<span style="font-style:italic">{{iosTask.description}}</span>
-	        </div>
+			<div class="item-names">{{iosTask.name}}<br>
+				<span style="font-style:italic; font-size: 14px">{{iosTask.description}}</span>
+			</div>
 		</div>
 	</md-item>
 </md-list>
@@ -109,10 +107,9 @@
 		            <md-icon md-svg-src="bower_components/material-design-icons/av/svg/design/ic_play_arrow_24px.svg"></md-icon>
 		        </md-button>
 	        </div>
-			<div>
-				<span class="item-names">{{customTask.name}}</span> <br>
-				<span style="font-style:italic">{{customTask.description}}</span>
-			</div>
+	        <div class="item-names">{{customTask.name}}<br>
+	        	<span style="font-style:italic; font-size: 14px">{{customTask.description}}</span>
+	        </div>
 		</div>
 	</md-item>
 </md-list>

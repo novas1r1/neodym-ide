@@ -63,12 +63,11 @@
 			            <md-icon md-svg-src="bower_components/material-design-icons/action/svg/design/ic_info_outline_24px.svg"></md-icon>
 			        </md-button>
 		        </div>
-				<div>
-					<strong>{{newPlugin.name}}</strong><span class="help-note">({{newPlugin.version}})</span><br>
-					{{newPlugin.description}}
-				</div>
+		        <div class="item-names-double"><strong>{{newPlugin.name}}</strong><span class="help-note">({{newPlugin.version}})</span><br>
+		        	<span style="font-style:italic; font-size: 14px">{{newPlugin.description}}</span>
+		        </div>
 			</div>
-			</md-item>
+		</md-item>
 	</md-list>
 </div>
 
@@ -83,6 +82,7 @@
 		<div class="text-content" ng-show="installedPlugins.length <= 0">
 			<em>No plugins installed</em>
 		</div>
+
 		<md-item ng-repeat="plugin in installedPlugins track by $index">
 		<div class="fullwidth">
 			<div class="float-right">
@@ -95,12 +95,11 @@
         		<md-button class="md-fab md-primary" aria-label="visit" ng-click="visitPluginPage(plugin)">
                     <md-icon md-svg-src="bower_components/material-design-icons/action/svg/design/ic_info_outline_24px.svg"></md-icon>
                 </md-button>
-	        </div>
-			<div>
-				<strong>{{plugin.name}}</strong><span class="help-note">({{plugin.version}})</span><br>
-				{{plugin.description}}
+		        </div>
+				<div class="item-names-double"><strong>{{plugin.name}}</strong><span class="help-note">({{plugin.version}})</span><br>
+					<span style="font-style:italic; font-size: 14px">{{plugin.description}}</span>
+				</div>
 			</div>
-		</div>
 		</md-item>
 </md-list>
 <md-content>

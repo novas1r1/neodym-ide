@@ -101,16 +101,28 @@ p {
  }
 
  .menu-item.active {
-     background: #009688;
-     color: white;
+    color: rgb(255,255,255);
+    background-color: rgb(55,71,79);
  }
 
-.sidemenu-title {
-    padding: 20px 30px;
+.sidemenu-logo {
+    height: 115px;
+    background: url("../images/neodym-logo_smaller.png");
+    background-size: cover;
+    border-bottom: 3px solid black;
+}
+
+.sidemenu-footer {
+    padding: 10px 20px;
+    border-top: 3px solid;
 }
 
 .sidemenu-icon {
    vertical-align: middle;
+}
+
+md-icon.md-default-theme {
+  color: white;
 }
 
 .radioValue {
@@ -198,17 +210,13 @@ details[open] summary {
     color: #FFF;
 }
 
-/**
- * layout in tasks
- */
-.fullwidth-right {
-    width: 100%;
-    text-align: right;
-}
 
 .fullwidth {
-    width: 100%;
     height: 80px;
+}
+
+.fullwidth:hover {
+  background-color: #B2DFDB;
 }
 
 /**
@@ -231,16 +239,16 @@ md-whiteframe.active {
  */
 .float-right {
     float: right;
+    padding-right: 30px;
 }
 
 .item-names {
     font-size: 18px;
+    padding: 25px 15px;
 }
 
-img.sidemenu-icon {
-    margin-right: 10px;
-    position: relative;
-    top: -2px;
+.item-names-double {
+  padding: 10px 15px;
 }
 
 .toast-error {
@@ -254,4 +262,8 @@ img.sidemenu-icon {
 
 md-toast.md-default-theme.md-bottom.md-right {
   max-width: 100% !important;
+}
+
+.green-text {
+    color: green;
 }
