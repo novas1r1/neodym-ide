@@ -24,24 +24,38 @@ Editing your settings is now possible via interface.
 ### Manage your components easily via interface
 Lots of components need to be created to implement the app logic within the source code. Building up a basic structure often needs a lot of time. Therefore the component manager will be introduced. It allows to create/edit and delete components as comfortable as possible. As neodym IDE tries to support you with testing, each created component also generates a matching test file. 
 
+![alt tag](https://raw.github.com/aaronprojects/neodym-ide/develop/images/components.png)
+
 ### Run often used tasks and create new tasks
 A lot of tasks need to be run very often. This always needs manual command prompt input and also requires remembering the commands. With neodym this gets replaced by the task manager which comes with predefined basic tasks or allows to customize tasks yourself. Each task can be started (and stopped) via click.
+
+![alt tag](https://raw.github.com/aaronprojects/neodym-ide/develop/images/tasks_overview.png)
 
 ### Check your code quality by running a code analysis powered by JSHint
 To get some hints on syntax errors, possible bugs or violating some conventions the code analysis manager helps to run JSHint and displays the results. 
 
+![alt tag](https://raw.github.com/aaronprojects/neodym-ide/develop/images/codeanalysis_overview.png)
+
 ### Manage your libraries
 Adding new libraries can easily be done by providing an URL of the JavaScript file or uploading a file from your hard disk. All used libraries will be listed in the library overview and automatically be referenced in the index.html file. It is also possible to remove the libraries completely from the project by clicking on a button.
+
+![alt tag](https://raw.github.com/aaronprojects/neodym-ide/develop/images/library_overview.png)
 
 ### Search for plugins and manage them easily using the plugin manager
 Maintaining plugins via the command prompt is really hard and time consuming. That's why I built a plugin manager which provides an overview about all installed plugins and tells you which plugin can be updated. Also searching for plugins and displaying the results as well as installing or uninstalling them via click is possible. 
 
+![alt tag](https://raw.github.com/aaronprojects/neodym-ide/develop/images/plugins_overview.png)
+
 ### Run your tests and have a look at your code coverage
 A testing environment using [Karma](http://karma-runner.github.io/) as the test runner and [Jasmine](http://jasmine.github.io/) as the testing framework is preinstalled and preconfigured by creating a new app project. Runnning tests is really easy by clicking on the "run" button in the test manager view. The results will be displayed using the [karma-htmlfile-reporter](https://www.npmjs.com/package/karma-htmlfile-reporter) as well as a code coverage using [istanbul](https://github.com/gotwarlost/istanbul). Hopefully this will motivate you to write and run some unit tests =)!
+
+![alt tag](https://raw.github.com/aaronprojects/neodym-ide/develop/images/testing_overview.png)
 
 ### Release your app easily
 
 *in progress*
+
+![alt tag](https://raw.github.com/aaronprojects/neodym-ide/develop/images/release_overview.png)
 
 ## Installation
 
