@@ -13,6 +13,8 @@ Please contact us if you have ANY! questions =)!
 ### Create a new app project including all configuration
 A new app project can easily be created by entering a name and a target directory as well as selecting a predefined Ionic template. Afterwards a template including all setup and configuration files will be downloaded and all dependencies will automatically be installed.
 
+![alt tag](https://raw.github.com/aaronprojects/neodym-ide/develop/images/setup_overview.png)
+
 ### Switch between your app projects
 In the project overview all app projects created with neodym are listed and can be opened to work on them.
 
