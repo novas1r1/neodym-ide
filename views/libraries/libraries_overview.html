@@ -1,0 +1,65 @@
+<!-- 
+/**
+ * Copyright aaronprojects GmbH (www.aaronprojects.de), 2015
+ * Distributed under the MIT License.
+ * (See accompanying file LICENSE or copy at http://opensource.org/licenses/MIT)
+ * Author: Verena Zaiser (verena.zaiser@aaronprojects.de)
+ */
+-->
+<!-- header -->
+<md-toolbar class="md-primary md-hue-2" ng-init="init()">
+	<div class="md-toolbar-tools">
+		<span class="md-flex">Libraries</span>
+	</div>
+</md-toolbar>
+
+<!-- content -->
+<md-content class="md-padding">
+
+<!-- add library via url -->
+<div layout="row" layout-sm="column">
+	<!-- url -->
+	<md-input-container>
+		<label>Url</label>
+		<input name="libraryUrl" ng-model="libraryUrl" required>
+	</md-input-container>
+</md-input-container>
+<md-button class="add-tab md-primary" ng-click="addLibraryFromUrl(libraryUrl)">Add Library</md-button>
+</div>
+
+<!-- add library via upload -->
+<div layout="row" layout-sm="column">
+	<md-input-container>
+		<input type="file" onchange="angular.element(this).scope().setDirectoryPath(this)" accept=".js"/>
+	</md-input-container>
+	
+<md-button class="add-tab md-primary" ng-click="addLocalLibrary()">Add Library</md-button>
+</div>
+
+<!-- list of all libraries -->
+<md-toolbar class="md-primary md-hue-2">
+	<div class="md-toolbar-tools">
+		<span class="md-flex">All Libraries in lib/...</span>
+	</div>
+</md-toolbar>
+<md-list>
+	<!-- no libraries available -->
+	<div class="text-content" ng-show="libraryList.length <= 0">
+		<em>No libraries available</em>
+	</div>
+
+	<!-- libraries found -->
+	<md-item ng-repeat="library in libraryList track by $index">
+		<div class="fullwidth">
+			<div class="float-right">
+				<md-button class="md-fab md-primary" aria-label="delete" ng-click="deleteLibrary(library)">
+		            <md-icon md-svg-src="bower_components/material-design-icons/action/svg/design/ic_delete_24px.svg"></md-icon>
+		        </md-button>
+	        </div>
+	        <div class="item-names-double">{{library.name}}<br>
+	        	<span style="font-style:italic; font-size: 14px">This is a test description for the added library.</span>
+	        </div>
+		</div>
+	</md-item>
+</md-list>
+<md-content>

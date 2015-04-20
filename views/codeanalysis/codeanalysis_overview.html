@@ -1,0 +1,21 @@
+<!-- 
+/**
+ * Copyright aaronprojects GmbH (www.aaronprojects.de), 2015
+ * Distributed under the MIT License.
+ * (See accompanying file LICENSE or copy at http://opensource.org/licenses/MIT)
+ * Author: Verena Zaiser (verena.zaiser@aaronprojects.de)
+ */
+-->
+<md-toolbar class="md-primary md-hue-2" ng-init="init()">
+    <div class="md-toolbar-tools">
+      <span class="md-flex">Code Analysis</span>
+    </div>
+</md-toolbar>
+
+<!-- content -->
+<md-content class="md-padding">
+	<md-button class="md-raised md-primary" ladda="refreshButton" ng-click="startAnalysing()">Refresh</md-button> <br> <br>
+	<div ng-include="resultSource"></div>
+</div>
+
+</md-content>

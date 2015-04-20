@@ -1,0 +1,108 @@
+<!-- 
+/**
+ * Copyright aaronprojects GmbH (www.aaronprojects.de), 2015
+ * Distributed under the MIT License.
+ * (See accompanying file LICENSE or copy at http://opensource.org/licenses/MIT)
+ * Author: Verena Zaiser (verena.zaiser@aaronprojects.de)
+ */
+-->
+<!-- header -->
+<md-toolbar class="md-primary md-hue-2" ng-init="init()">
+	<div class="md-toolbar-tools">
+		<span class="md-flex">Plugins</span>
+	</div>
+</md-toolbar>
+
+<!-- content -->
+<md-content class="md-padding">
+
+<!-- search -->
+<div layout="row" layout-sm="column">
+
+	<!-- alias name -->
+	<md-input-container class="md-primary">
+		<label>Search</label>
+		<input name="search" ng-model="searchQuery">
+	</md-input-container>
+
+	<md-button class="add-tab md-primary" ladda="searchButton" ng-click="searchPlugins(searchQuery)">Go!</md-button>
+</div>
+
+<!-- add plugin via repository -->
+<div layout="row" layout-sm="column">
+	<!-- alias name -->
+	<md-input-container class="md-primary">
+		<label>Plugin Url</label>
+		<input name="pluginUrl" ng-model="pluginUrl">
+	</md-input-container>
+
+	<md-button class="add-tab md-primary" ladda="installButton" ng-click="addPluginFromUrl(pluginUrl)">Add Plugin</md-button>
+</div>
+
+<!-- plugin search -->
+<div class="input-group padding-bottom">
+	<span class="input-group-btn">
+	</span>
+</div>
+
+<!-- search results -->
+<div ng-if="numberOfPluginsFound > 0">
+	<md-toolbar class="md-primary md-hue-2">
+		<div class="md-toolbar-tools">
+			<span class="md-flex">Search results ({{numberOfPluginsFound}})</span>
+		</div>
+	</md-toolbar>
+	<md-list>
+		<md-item ng-repeat="newPlugin in searchResults track by $index">
+			<div class="fullwidth">
+				<div class="float-right">
+					<md-button class="md-fab md-primary" aria-label="install" ladda="installButton" ng-click="installPlugin(newPlugin)">
+			            <md-icon md-svg-src="bower_components/material-design-icons/file/svg/design/ic_file_download_24px.svg"></md-icon>
+			        </md-button>
+					<md-button class="md-fab md-primary" aria-label="visit" ng-click="visitPluginPage(newPlugin)">
+			            <md-icon md-svg-src="bower_components/material-design-icons/action/svg/design/ic_info_outline_24px.svg"></md-icon>
+			        </md-button>
+		        </div>
+		        <div class="item-names-double"><strong>{{newPlugin.name}}</strong><span class="help-note">({{newPlugin.version}})</span><br>
+		        	<span style="font-style:italic; font-size: 14px">{{newPlugin.description}}</span>
+		        </div>
+			</div>
+		</md-item>
+	</md-list>
+</div>
+
+<!-- installed plugins -->
+<md-toolbar class="md-primary md-hue-2">
+	<div class="md-toolbar-tools">
+		<span class="md-flex">Installed plugins</span>
+	</div>
+</md-toolbar>
+<md-list>
+		<!-- no plugins installed -->
+		<div class="text-content" ng-show="installedPlugins.length <= 0">
+			<em>No plugins installed</em>
+		</div>
+
+		<md-item ng-repeat="plugin in installedPlugins track by $index">
+		<div class="fullwidth">
+			<div class="float-right">
+				<md-button class="md-fab md-primary" aria-label="update" ng-if="plugin.update == true" ladda="updateButton" ng-click="updatePlugin(plugin)">
+		            <md-icon md-svg-src="bower_components/material-design-icons/av/svg/design/ic_loop_24px.svg"></md-icon>
+		        </md-button>
+				<md-button class="md-fab md-primary" aria-label="uninstall" ng-click="uninstallPlugin(plugin)" ladda="uninstallButton">
+		            <md-icon md-svg-src="bower_components/material-design-icons/action/svg/design/ic_delete_24px.svg"></md-icon>
+		        </md-button>
+        		<md-button class="md-fab md-primary" aria-label="visit" ng-click="visitPluginPage(plugin)">
+                    <md-icon md-svg-src="bower_components/material-design-icons/action/svg/design/ic_info_outline_24px.svg"></md-icon>
+                </md-button>
+		        </div>
+				<div class="item-names-double"><strong>{{plugin.name}}</strong><span class="help-note">({{plugin.version}})</span><br>
+					<span style="font-style:italic; font-size: 14px">{{plugin.description}}</span>
+				</div>
+			</div>
+		</md-item>
+</md-list>
+<md-content>
+
+
+

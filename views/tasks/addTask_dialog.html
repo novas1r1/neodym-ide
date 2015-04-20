@@ -1,0 +1,42 @@
+<!-- 
+/**
+ * Copyright aaronprojects GmbH (www.aaronprojects.de), 2015
+ * Distributed under the MIT License.
+ * (See accompanying file LICENSE or copy at http://opensource.org/licenses/MIT)
+ * Author: Verena Zaiser (verena.zaiser@aaronprojects.de)
+ */
+-->
+<md-dialog aria-label="Add new task">
+	<md-toolbar class="md-primary md-hue-2">
+		<div class="md-toolbar-tools">
+			Add new task
+		</div>
+	</md-toolbar>
+	<md-content>
+		<p>Add new user tasks which can be run, modified and deleted by you.
+		</p>
+		<md-input-container flex>
+			<label>Name</label>
+			<input ng-model="task.name">
+		</md-input-container>
+		<md-input-container flex>
+			<label>Command</label>
+			<input ng-model="task.command">
+		</md-input-container>
+		<md-input-container flex>
+			<label>Description</label>
+			<textarea ng-model="task.description" columns="1" md-maxlength="150"></textarea>
+		</md-input-container>
+		<md-radio-group class="md-primary" ng-model="task.platform">
+			<md-radio-button value="webview">Webview</md-radio-button>
+			<md-radio-button value="android">Android</md-radio-button>
+			<md-radio-button value="ios">iOS</md-radio-button>
+			<md-radio-button value="custom">Custom</md-radio-button>
+		</md-radio-group>
+	</md-content>
+	<div class="md-actions" layout="row">
+		<md-button ng-click="hide()">Cancel</md-button>
+		<md-button ng-click="answer(task)" class="md-primary">Add Task</md-button>
+	</div>
+</md-dialog>
+

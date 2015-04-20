@@ -1,0 +1,51 @@
+<!-- 
+/**
+ * Copyright aaronprojects GmbH (www.aaronprojects.de), 2015
+ * Distributed under the MIT License.
+ * (See accompanying file LICENSE or copy at http://opensource.org/licenses/MIT)
+ * Author: Verena Zaiser (verena.zaiser@aaronprojects.de)
+ */
+-->
+<!-- header -->
+<md-toolbar class="md-primary md-hue-2" ng-init="init()">
+<div class="md-toolbar-tools">
+	<span class="md-flex">Project</span>
+</div>
+</md-toolbar>
+
+<!-- content -->
+<md-content class="md-padding">
+	<md-toolbar class="md-primary md-hue-2">
+	<div class="md-toolbar-tools">
+		<span class="md-flex">Needed dependencies</span>
+	</div>
+	</md-toolbar>
+	<p>The following dependencies are required to develop hybrid apps with Ionic using neodym: <br><br>
+		angular-mocks, bower, grunt, grunt-browserify, grunt-contrib-jshint, grunt-contrib-watch, grund-karma, gulp, gulp-concat, gulp-minify-css, gulp-rename, gulp-sass, gulp-util, jasmine-core, jshint-html-reporter, karma, karma-chrome-launcher, karma-coverage, karma-jasmine, shelljs
+	</p>
+	<md-button class="md-raised md-primary" ladda="installButton" data-size="xs" ng-click="executeNpmInstall()">Install dependencies</md-button>
+</md-content>
+
+<!-- list of dependencies including their install state -->
+<md-content class="md-padding">
+<md-toolbar class="md-primary md-hue-2">
+<div class="md-toolbar-tools">
+	<span class="md-flex">Installed dependencies</span>
+</div>
+</md-toolbar>
+
+<md-list ng-repeat="dependency in dependencies">
+	<md-list-item class="md-2-line">
+	<!-- <img src="bower_components/material-design-icons/navigation/svg/design/ic_check_24px.svg" class="md-avatar" alt="" ng-show="dependency.installed"> -->
+	<!-- <img src="bower_components/material-design-icons/navigation/svg/design/ic_close_24px.svg" class="md-avatar" alt="" ng-hide="dependency.installed"> -->
+	<md-icon md-svg-icon="bower_components/material-design-icons/navigation/svg/design/ic_check_24px.svg" ng-if="dependency.installed"></md-icon>
+	<md-icon md-svg-icon="bower_components/material-design-icons/navigation/svg/design/ic_close_24px.svg" ng-if="!dependency.installed"></md-icon>
+	<div class="md-list-item-text">
+		<h3>{{dependency.name}}</h3>
+		<p>{{dependency.description}}</p>
+	</div>
+</md-list-item>
+</md-list>
+<md-content>
+
+

@@ -1,0 +1,145 @@
+<!-- 
+/**
+ * Copyright aaronprojects GmbH (www.aaronprojects.de), 2015
+ * Distributed under the MIT License.
+ * (See accompanying file LICENSE or copy at http://opensource.org/licenses/MIT)
+ * Author: Verena Zaiser (verena.zaiser@aaronprojects.de)
+ */
+-->
+<md-toolbar class="md-primary md-hue-2" ng-init="init()">
+<div class="md-toolbar-tools">
+	<span class="md-flex">Settings</span>
+</div>
+</md-toolbar>
+<md-content class="md-padding">
+<details>
+	<summary>General Settings</summary>
+
+	<!-- description -->
+	<md-input-container flex class="md-primary">
+		<label>Description</label>
+		<textarea ng-model="projectDescription" columns="1" md-maxlength="150"></textarea>
+	</md-input-container>
+	<md-button class="md-raised md-primary" ng-click="saveDescription(description)">Save description</md-button>
+
+	<!-- app name -->
+	<!-- name -->
+	<p><strong>Change app-name <span class="help-note">(current: {{configXML.currentAppName}})</span></strong></p>
+		<md-input-container class="md-primary">
+		<label>app-name</label>
+		<input name="projectName" ng-model="configXML.appName">
+	</md-input-container>
+
+	<!-- app id -->
+	<p><strong>Change app-id <span class="help-note">(current: {{configXML.currentAppId}})</span></strong></p>
+	<md-input-container class="md-primary">
+		<label>app-id</label>
+		<input name="projectId" ng-model="configXML.appId">
+	</md-input-container>
+
+	<!-- app version -->
+	<p><strong>Change App-Version <span class="help-note">(current: {{configXML.currentAppVersion}})</span></strong></p>
+	<div layout="row">
+		<md-input-container>
+			<label>major</label>
+			<input ng-model="appVersion.major">
+		</md-input-container>
+		<md-input-container class="md-primary">
+			<label>minor</label>
+			<input ng-model="appVersion.minor">
+		</md-input-container>
+		<md-input-container class="md-primary">
+			<label>patch</label>
+			<input ng-model="appVersion.patch">
+		</md-input-container>
+			<md-input-container class="md-primary">
+			<label>build</label>
+			<input ng-model="appVersion.build">
+		</md-input-container>
+	</div>
+
+	<p><strong>Change author-email <span class="help-note">(current: {{configXML.currentAuthorEmail}})</span></strong></p>
+	<md-input-container class="md-primary">
+		<label>author-email</label>
+		<input name="projectId" ng-model="configXML.authorEmail">
+	</md-input-container>
+
+	<p><strong>Change author-link <span class="help-note">(current: {{configXML.currentAuthorLink}})</span></strong></p>
+		<md-input-container class="md-primary">
+		<label>author-link</label>
+		<input name="projectId" ng-model="configXML.authorLink">
+	</md-input-container>
+
+	<p><strong>Change author-name <span class="help-note">(current: {{configXML.currentAuthorName}})</span></strong></p>
+	<md-input-container class="md-primary">
+	<label>author-name</label>
+	<input name="projectId" ng-model="configXML.authorName">
+	</md-input-container>
+
+	<p><strong>Access origin <span class="help-note">(current: {{configXML.currentAccesses}})</span></strong></p>
+	<md-input-container class="md-primary">
+	<label>app-id</label>
+	<input name="projectId" ng-model="configXML.appId">
+	</md-input-container>
+
+	<div ng-repeat="access in accessList">
+		<p>{{access.name}}</p>
+	</div>
+	<md-input-container class="md-primary">
+		<label>add new access</label>
+		<input name="projectId" ng-model="newAccess" ng-click="addAccess(newAccess)">
+	</md-input-container>
+
+	<md-button class="md-raised md-primary" ng-click="saveChanges()">Save</md-button>
+</details>
+<hr />
+<details>
+	<summary>Android Settings</summary>
+
+	<p><strong>Change debuggable state <span class="help-note">(current: {{android.debuggable}})</span></strong>
+	<md-checkbox class="md-primary" ng-model="android.debuggable" aria-label="" ng-click="changeAndroidDebuggable(android.debuggable)">
+	Debuggable
+	</md-checkbox></p>
+
+	<p><strong>Change minSdk and targetSdk version <span class="help-note">(current minSdk: {{android.currentMinSDK}}, current targetSdk: {{android.currentTargetSDK}})</span></strong></p>
+	<div class="form-group" class="md-primary">
+		<label for="android.minSDK" class="control-label">minSDK:</label>
+		<select id="android.minSDK" class="md-primary" ng-model="android.minSDK" ng-options="sdk.name for sdk in sdkList" ng-selected="android.currentMinSDK"></select>
+		<label for="android.targetSDK" class="control-label">targetSDK:</label>
+		<select id="android.targetSDK" class="md-primary" ng-model="android.targetSDK" ng-options="sdk.name for sdk in sdkList" ng-selected="android.currentTargetSDK"></select>
+	</div>
+
+	<p><strong>Orientation <span class="help-note">(current: {{configXML.currentOrientation}})</span></strong></p>
+	<md-radio-group class="md-primary" ng-model="data.group1">
+		<md-radio-button class="md-primary" ng-model="configXML.orientation" value="landscape">Landscape</md-radio-button>
+		<md-radio-button class="md-primary" ng-model="configXML.orientation" value="portrait">Portrait</md-radio-button>
+	</md-radio-group>
+	
+	<md-button class="md-raised md-primary" ng-click="saveChanges()">Save</md-button>
+</details>
+<hr />
+<details>
+	<summary>Generate documentation</summary>
+	<p class=".md-body-1">Create a HTML documentation file out of source code comments and export it to your desired target or view it in your browser.</p>
+
+	<md-button class="md-raised md-primary" ng-click="generateDocumentation()">Generate documentation</md-button>
+</details>
+<hr />
+<details>
+	<summary>Switch development environment</summary>
+	<p class=".md-body-1">It is possible to create different environment configurations and switch between them. The development, integration, staging and production environment configurations are given by default.</p>
+		<select id="configuration" ng-model="configuration" ng-options="configuration.name for configuration in configurationList" ng-selected="configuration.current"></select>
+
+	<md-button class="md-raised md-primary" ng-click="switchEnvironment()">Apply</md-button>
+
+	<md-input-container class="md-primary">
+		<label>Name</label>
+		<input name="projectName" ng-model="data.projectName" required>
+	</md-input-container>
+	<md-button class="md-raised md-primary" ng-click="generateDocumentation()">Create new</md-button>
+</details>
+</md-content>
+
+
+
+

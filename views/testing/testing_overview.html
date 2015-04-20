@@ -1,0 +1,25 @@
+<!-- 
+/**
+ * Copyright aaronprojects GmbH (www.aaronprojects.de), 2015
+ * Distributed under the MIT License.
+ * (See accompanying file LICENSE or copy at http://opensource.org/licenses/MIT)
+ * Author: Verena Zaiser (verena.zaiser@aaronprojects.de)
+ */
+-->
+<!-- header -->
+<md-toolbar class="md-primary md-hue-2" ng-init="init()">
+	<div class="md-toolbar-tools">
+	  <span class="md-flex">Testing</span>
+	</div>
+</md-toolbar>
+
+<!-- content -->
+<md-content class="md-padding">
+  <md-button class="md-raised md-primary" ladda="runButton" ng-click="runTests()">Run tests</md-button>
+
+	<!-- iframe -->
+	<iframe width="100%" height="550" ng-src="{{testResults}}" style="border: 0"></iframe>
+
+	<!-- iframe -->
+	<iframe width="100%" height="700" ng-src="{{testCoverage}}" style="border: 0"></iframe>
+<md-content>

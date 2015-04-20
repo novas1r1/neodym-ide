@@ -1,0 +1,62 @@
+{
+  "name": "neodym",
+  "author": "Verena Zaiser, aaronprojects GmbH",
+  "license": "MIT",
+  "main": "index.html",
+  "version": "0.4.0",
+  "description": "The neodym IDE helps you to create and manage hybrid apps using Ionic fast and comfortable",
+  "devDependencies": {
+    "angular-mocks": "^1.3.15",
+    "fs.extra": "^1.3.2",
+    "grunt-browserify": "^3.6.0",
+    "grunt-cli": "^0.1.13",
+    "grunt-contrib-jshint": "~0.11.1",
+    "grunt-contrib-watch": "^0.6.1",
+    "grunt-istanbul-coverage": "^0.0.1",
+    "grunt-karma": "^0.10.1",
+    "grunt-contrib-uglify": "^0.9.1",
+    "grunt-node-webkit-builder": "^1.0.2",
+    "jasmine-core": "^2.2.0",
+    "jshint-html-reporter": "~0.2.3",
+    "karma-chrome-launcher": "^0.1.7",
+    "karma-coverage": "~0.2",
+    "karma-jasmine": "^0.3.5",
+    "karma-htmlfile-reporter":"~0.1",
+    "mkdirp": "^0.5.0",
+    "ncp": "^2.0.0",
+    "node-webkit-builder": "^1.0.11",
+    "open": "^0.0.5",
+    "pretty-data": "^0.40.0",
+    "rimraf": "^2.3.2"
+  },
+  "window": {
+    "toolbar": true,
+    "resizable": true,
+    "width": 1920,
+    "height": 1080
+  },
+  "webkit": {
+    "plugin": true,
+    "java": true,
+    "page-cache": false
+  },
+  "dependencies": {
+    "bower": "^1.4.1",
+    "grunt": "^0.4.5",
+    "karma": "^0.12.31"
+  },
+  "scripts": {
+    "postinstall" : "node_modules/.bin/bower install"
+    },
+  "keywords": [
+    "hybrid",
+    "app",
+    "development",
+    "ionic",
+    "karma",
+    "angularjs"
+  ],
+  "directories": {
+    "test": "test"
+  }
+}

@@ -1,0 +1,273 @@
+/**
+ * Copyright aaronprojects GmbH (www.aaronprojects.de), 2015
+ * Distributed under the MIT License.
+ * (See accompanying file LICENSE or copy at http://opensource.org/licenses/MIT)
+ * Author: Verena Zaiser (verena.zaiser@aaronprojects.de)
+ */
+
+p {
+    padding: 10px;
+}
+
+/**
+ * Animations
+ */
+.ng-hide-add, .ng-hide-remove {
+    display: block !important;
+}
+
+.cssSlideUp {
+    transition: .5s linear all;
+    height: 450px;
+    overflow: hidden;
+    padding: 0 !important;
+}
+
+.cssSlideUp.ng-hide {
+    height:0;
+}
+
+/**
+ * Misc
+ */
+#container {
+	margin: 0;
+	padding: 100px 0px;
+}
+
+.text-content {
+	padding: 20px 10px;
+}
+
+.align-middle {
+	vertical-align: middle !important;
+}
+
+.help-note {
+    font-size: 14px;
+    color: grey;
+}
+
+/**
+ * sticky bottom footer with alert or success messages
+ */
+.footer {
+    position: fixed;
+    bottom: 10px;
+    width: 100%;
+}
+
+.alert,
+.success {
+    width: 73%;
+    margin-bottom: 0;
+}
+
+.padding-bottom {
+    padding-bottom: 20px;
+}
+
+/**
+ * Material design
+ */
+ .menu-item {
+     background: none;
+     border-width: 0;
+     cursor: pointer;
+     display: block;
+     color: #333;
+     font-size: inherit;
+     line-height: 40px;
+     max-height: 40px;
+     opacity: 1;
+     margin: 0;
+     outline: none;
+     padding: 0px 28px;
+     position: relative;
+     text-align: left;
+     text-decoration: none;
+     width: 100%;
+     z-index: 1;
+     -webkit-transition: 0.45s cubic-bezier(0.35, 0, 0.25, 1);
+     -webkit-transition-property: max-height, background-color, opacity;
+     -moz-transition: 0.45s cubic-bezier(0.35, 0, 0.25, 1);
+     -moz-transition-property: max-height, background-color, opacity;
+     transition: 0.45s cubic-bezier(0.35, 0, 0.25, 1);
+     transition-property: max-height, background-color, opacity;
+ }
+
+ .menu-item:hover {
+     background: #B2DFDB;
+ }
+
+ .menu-item.active {
+    color: rgb(255,255,255);
+    background-color: rgb(55,71,79);
+ }
+
+ md-icon.active {
+   color: white;
+ }
+
+ span.icon-text.ng-binding {
+   padding: 15px;
+ }
+
+.sidemenu-logo {
+    height: 115px;
+    background: url("../images/neodym-logo_smaller.png");
+    background-size: cover;
+    border-bottom: 3px solid black;
+}
+
+.sidemenu-footer {
+    padding: 10px 20px;
+    border-top: 3px solid;
+}
+
+.sidemenu-icon {
+   vertical-align: middle;
+}
+
+.radioValue {
+  margin: 5px;
+  font-weight: bold;
+  padding: 5px; 
+}
+
+.md-input-group {
+  margin: 10px 8px 0px 15px;
+}
+
+md-input-container {
+    padding: 5px 10px;
+}
+
+.custom-input-group {
+    padding: 0 0 15px 15px;
+}
+
+.md-fab {
+    margin: 10px;
+}
+
+.form-group {
+    padding: 10px;
+}
+
+/**
+ * end material design
+ */
+
+/**
+ * dialogs
+ */
+.custom-dialog {
+    padding: 0;
+    width: 300px;
+}
+
+.custom-dialog-big {
+    width: 400px;
+}
+/**
+ * end dialogs
+ */
+
+/**
+ * img
+ */
+.bordered {
+    border: 1px solid #009688;
+    width: 200px;
+    margin: 10px;
+}
+
+.heading {
+    color: white;
+    background-color: #009688;
+    padding: 10px;
+    margin: 0;
+    font-size: 20pt;
+}
+
+
+/** 
+ * details and summary elements
+ */
+details {
+    background: #fff;
+}
+
+details summary {
+    font-size: 17px;
+    vertical-align: top;
+    background: #37474f;
+    color: #FFF;
+    border-radius: 3px;
+    padding: 5px 10px;
+    outline: none;
+}
+
+details[open] summary {
+    background: #607d8b;
+    color: #FFF;
+}
+
+
+.fullwidth {
+    height: 80px;
+}
+
+.fullwidth:hover {
+  background-color: #B2DFDB;
+}
+
+/**
+ * active project in list
+ */
+md-whiteframe.active {
+    background-color: #009688;
+    color: white;
+}
+
+/**
+ * alignments
+ */
+.align-middle {
+    vertical-align: middle;
+}
+
+/**
+ * 
+ */
+.float-right {
+    float: right;
+    padding-right: 30px;
+}
+
+.item-names {
+    font-size: 18px;
+    padding: 25px 15px;
+}
+
+.item-names-double {
+  padding: 10px 15px;
+}
+
+.toast-error {
+    background-color: red !important;
+}
+
+.toast-success {
+    background-color: green !important;
+}
+
+
+md-toast.md-default-theme.md-bottom.md-right {
+  max-width: 100% !important;
+}
+
+.green-text {
+    color: green;
+}
