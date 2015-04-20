@@ -105,6 +105,14 @@ p {
     background-color: rgb(55,71,79);
  }
 
+ md-icon.active {
+   color: white;
+ }
+
+ span.icon-text.ng-binding {
+   padding: 15px;
+ }
+
 .sidemenu-logo {
     height: 115px;
     background: url("../images/neodym-logo_smaller.png");
@@ -119,10 +127,6 @@ p {
 
 .sidemenu-icon {
    vertical-align: middle;
-}
-
-md-icon.md-default-theme {
-  color: white;
 }
 
 .radioValue {

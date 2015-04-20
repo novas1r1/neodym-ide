@@ -19,7 +19,7 @@
 		    <md-content>
 		      <div ng-repeat="item in items">
 		        <button class="menu-item menu-title md-menu-item" ng-class="item.active" ng-click="setActive(item)" md-highlight="menu.isSectionSelected(item)" md-ink-ripple="#bbb">
-                    <md-icon md-svg-src="bower_components/material-design-icons/{{item.icon}}" class="s24" alt="Cake"></md-icon>{{item.name}}
+                    <md-icon md-svg-src="bower_components/material-design-icons/{{item.icon}}" ng-class="item.active" alt="Cake"></md-icon><span class="icon-text">{{item.name}}</span>
 		        </button>
 		      </div>
               <div class="sidemenu-footer"> 
