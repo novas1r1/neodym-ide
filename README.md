@@ -15,8 +15,6 @@ A new app project can easily be created by entering a name and a target director
 
 ![alt tag](https://raw.github.com/aaronprojects/neodym-ide/develop/images/setup.png)
 
-![alt tag](https://raw.github.com/aaronprojects/neodym-ide/develop/images/project.png)
-
 ### Switch between your app projects
 In the project overview all app projects created with neodym are listed and can be opened to work on them.
 
