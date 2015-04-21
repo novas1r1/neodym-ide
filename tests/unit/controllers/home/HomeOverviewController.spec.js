@@ -1,24 +1,16 @@
-describe('HomeOverviewController Testsuite', function () {
-	var $scope, $q, controller;
+describe('HomeOverviewController', function(){
+    var scope;
 
-	beforeEach(module('neodym'));
+    // load the controller's module
+    beforeEach(module('neodym.controllers'));
 
-	// contact controller tests
-	beforeEach(inject(function ($rootScope, $controller, _$q_) {
-		$scope = $rootScope.$new();
+    beforeEach(inject(function($rootScope, $controller) {
+        scope = $rootScope.$new();
+        $controller('HomeOverviewController', {$scope: scope});
+    }));
 
-		controller = $controller('HomeOverviewController', {
-			'$scope': $scope
-		});
-
-		$q = _$q_;
-
-	}));
-
-
-	it('Should exist on startup', function () {
-		expect(controller).toBeDefined();
-		expect($scope).toBeDefined();
-	});
-
+    // tests start here
+    it('should have enabled friends to be true', function(){
+        expect(scope.settings.enableFriends).toEqual(true);
+    });
 });
