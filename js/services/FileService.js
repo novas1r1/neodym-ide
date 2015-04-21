@@ -178,7 +178,7 @@ angular.module('neodym.services')
 		 * @return {Boolean} true or false
 		 */
 		var isDirectory = function (path) {
-			return fs.lstatSync(path).isDirectory()
+			return fs.lstatSync(path).isDirectory();
 		};
 
 		/**

@@ -51,14 +51,14 @@ angular.module('neodym.controllers')
 			checkForUpdates(plugin).then(function (result) {
 				if(result.hasOwnProperty('update')) {
 					if(!result.update) {
-						plugin["update"] = false;
+						plugin.update = false;
 					} else {
-						plugin["update"] = true;
+						plugin.update = true;
 					}
 				}
         		$scope.installedPlugins.push(plugin);
 			}, function (failure) {
-				plugin["update"] = false;
+				plugin.update = false;
 			});
 
             deferred.resolve(plugin);
@@ -98,7 +98,7 @@ angular.module('neodym.controllers')
 			deferred.reject({
 				error:failure.error,
 				msg:failure.msg
-			})
+			});
 		});
 
         return deferred.promise;
@@ -122,14 +122,14 @@ angular.module('neodym.controllers')
 			/*checkForUpdates(plugin).then(function (result) {
 				if(result.hasOwnProperty('update')) {
 					if(!result.update) {
-						plugin["update"] = false;
+						plugin.update = false;
 					} else {
-						plugin["update"] = true;
+						plugin.update = true;
 					}
 				}
         		$scope.installedPlugins.push(plugin);
 			}, function (failure) {
-				plugin["update"] = false;
+				plugin.update = false;
 			});
 
             deferred.resolve(plugin);*/
@@ -157,7 +157,7 @@ angular.module('neodym.controllers')
         .success(function (data, status, headers, config) {
         	//get current plugin version
         	var localPluginVersion = localPlugin.version.split(".").join("");
-        	var remotePluginVersion = data["dist-tags"]["latest"].split(".").join("");
+        	var remotePluginVersion = data["dist-tags"].latest.split(".").join("");
 
         	//check if newer plugin version is available on remote
 			if(localPluginVersion < remotePluginVersion) {
@@ -217,7 +217,7 @@ angular.module('neodym.controllers')
         .success(function (data, status, headers, config) {
 			$scope.searchButton = false;
 
-			if(data != null) {
+			if(data !== null) {
 	        	//get number plugins matching search
 	        	$scope.numberOfPluginsFound = data.rows.length;
 
@@ -228,7 +228,7 @@ angular.module('neodym.controllers')
 	        	//add plugins to searchresult
 	        	for (var i = 0; i < data.rows.length; i++) {
 	        		$scope.searchResults.push(data.rows[i].value);
-	        	};
+	        	}
 			}            
         })
         .error(function (data, status, headers, config) {

@@ -54,7 +54,7 @@ angular.module('neodym.controllers')
 					console.log("android: " + $scope.currentProject.android);
 					console.log("ios: " + $scope.currentProject.ios);
 				}
-			};
+			}
 
 			$scope.checkIfInstalled();
 
@@ -108,7 +108,7 @@ angular.module('neodym.controllers')
 		});
 
 		// add android if android was selected
-		if($scope.currentProject.android == true) {
+		if($scope.currentProject.android === true) {
 
 			TaskService.executeTask("cordova platform add android", localStorage.currentProjectPath).then(function (result) {
 				$scope.dependencies[5].installed = true;
@@ -127,7 +127,7 @@ angular.module('neodym.controllers')
 		}
 
 		// add ios if ios was selected
-		if($scope.currentProject.ios == true) {
+		if($scope.currentProject.ios === true) {
 			TaskService.executeTask("cordova platform add ios", localStorage.currentProjectPath).then(function (result) {
 				$scope.dependencies[6].installed = true;
 			}, function (failure) {

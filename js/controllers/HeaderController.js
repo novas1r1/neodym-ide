@@ -97,7 +97,7 @@ angular.module('neodym.controllers')
 			} else {
 				$scope.items[i].active = "";
 			}
-		};
+		}
 	};
 
 	/**

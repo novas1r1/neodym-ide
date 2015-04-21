@@ -67,13 +67,13 @@ angular.module('neodym.controllers')
 				for (var i = 0; i < libraryArray.length; i++) {
 					if(libraryArray[i].length > 0) {
 						var libraryName = libraryArray[i].match(libraryNameRegex);
-						if(libraryName != null) {
+						if(libraryName !== null) {
 							libraryList.push({
 								name: libraryName[1]
 							});
 						}
 					}
-				};
+				}
 				deferred.resolve(libraryList);
 			} else {
 				deferred.reject("No libraries available");
@@ -104,7 +104,7 @@ angular.module('neodym.controllers')
 			var linesToAdd = '\n<!-- please dont remove this line -->\n';
 			for (var i = 0; i < result.length; i++) {
 				linesToAdd += '<script type="text/javascript" src="lib/' + result[i].name + '"></script>' + '\n';
-			};
+			}
 
 			//5. get everything between area
 			FileService.readFile(indexPath).then(function (result) {
