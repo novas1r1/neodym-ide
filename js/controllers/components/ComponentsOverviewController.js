@@ -150,13 +150,13 @@ angular.module('neodym.controllers')
 					for (var i = 0; i < componentArray.length; i++) {
 						if(componentArray[i].length > 0) {
 							var componentName = componentArray[i].match(componentNameRegex);
-							if(componentName != null) {
+							if(componentName !== null) {
 								componentList.push({
 									name: componentName[1]
 								});
 							}
 						}
-					};
+					}
 					deferred.resolve(componentList);
 				} else {
 					//TODO check if this still can happen
@@ -225,27 +225,27 @@ angular.module('neodym.controllers')
 			var linesToAdd = '\n' + '<script type="text/javascript" src="js/'+ componentType + '.js"></script>' + '\n';
 			for (var i = 0; i < result.length; i++) {
 				linesToAdd += '<script type="text/javascript" src="js/' + componentType + '/' + result[i].name + '.js"></script>' + '\n';
-			};
+			}
 
 			//5. get everything between area
 			FileService.readFile(indexPath).then(function (result) {
-				console.log(result);
+				var dataToReplace;
 
 				switch(componentType) {
 					case "controllers":
-						var dataToReplace = result.success.match(/(?:<!-- BEGIN CONTROLLERS -->)([\w\W]*)(?:<!-- END CONTROLLERS -->)/i);
+						dataToReplace = result.success.match(/(?:<!-- BEGIN CONTROLLERS -->)([\w\W]*)(?:<!-- END CONTROLLERS -->)/i);
 						break;
 					case "services":
-						var dataToReplace = result.success.match(/(?:<!-- BEGIN SERVICES -->)([\w\W]*)(?:<!-- END SERVICES -->)/i);
+						dataToReplace = result.success.match(/(?:<!-- BEGIN SERVICES -->)([\w\W]*)(?:<!-- END SERVICES -->)/i);
 						break;
 					case "directives":
-						var dataToReplace = result.success.match(/(?:<!-- BEGIN DIRECTIVES -->)([\w\W]*)(?:<!-- END DIRECTIVES -->)/i);
+						dataToReplace = result.success.match(/(?:<!-- BEGIN DIRECTIVES -->)([\w\W]*)(?:<!-- END DIRECTIVES -->)/i);
 						break;
 					case "filters":
-						var dataToReplace = result.success.match(/(?:<!-- BEGIN FILTERS -->)([\w\W]*)(?:<!-- END FILTERS -->)/i);
+						dataToReplace = result.success.match(/(?:<!-- BEGIN FILTERS -->)([\w\W]*)(?:<!-- END FILTERS -->)/i);
 						break;
 					default:
-						var dataToReplace = null;
+						dataToReplace = null;
 					break;
 				}
 				
@@ -264,7 +264,7 @@ angular.module('neodym.controllers')
 						var foldersWithoutFile = "";
 						for (var i = 0; i < folders.length; i++) {
 							foldersWithoutFile += folders[i] + "/";
-						};
+						}
 
 						//8. check if folders need to be created
 						if(componentName.indexOf("/") > -1) {
@@ -402,7 +402,7 @@ angular.module('neodym.controllers')
 		return deferred.promise;
 	};
 
-}])
+}]);
 
 function DialogController($scope, $mdDialog) {
 
@@ -419,4 +419,4 @@ function DialogController($scope, $mdDialog) {
 	$scope.answer = function(answer) {
 		$mdDialog.hide(answer);
   };
-};
+}

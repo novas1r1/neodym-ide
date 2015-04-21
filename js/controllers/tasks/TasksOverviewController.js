@@ -187,23 +187,23 @@ angular.module('neodym.controllers')
 
  		for (var i = 0; i < $scope.taskList.length && !stopIt; i++) {
  			if(taskToDelete.id == $scope.taskList[i].id) {
- 				var stopIt = true;
+ 				stopIt = true;
  				$scope.taskList.splice(i, 1);
 
  				saveConfig(userTasksConfigPath, $scope.taskList).then(function (result) {
  					console.log(result);
 					$scope.successMessage = "Task '" + taskToDelete.name + "' deleted.";
-					$("#successBox").show();
+					displayAlertBox("success", result.msg);
  				}, function (failure) {
  					console.log(TAG + failure);
  					$scope.errorMessage = failure;
  					$scope.$apply();
- 					$("#errorBox").show();
+ 					displayAlertBox("error", result.msg);
  				});
  			}
- 		};
+ 		}
  	};
-}])
+}]);
 function DialogController($scope, $mdDialog) {
 
 	//make sure that one radiobutton is always selected
@@ -220,4 +220,4 @@ function DialogController($scope, $mdDialog) {
 	$scope.answer = function(answer) {
 		$mdDialog.hide(answer);
   };
-};
+}
