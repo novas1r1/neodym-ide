@@ -32,10 +32,10 @@ module.exports = function(grunt) {
     },
     nodewebkit: {
       options: {
-        platforms: ['win64'],
-        buildDir: '../code/builds',
+        platforms: ['linux32'],
+        buildDir: '../neodym-ide/builds',
       },
-      src: ['../code/**/*']
+      src: ['../neodym-ide/**/*']
     }
   });
 
