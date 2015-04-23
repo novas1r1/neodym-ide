@@ -1,24 +1,25 @@
-describe('PluginOverviewController Testsuite', function () {
-	var $scope, $q, controller;
+describe('PluginOverviewController.spec.js', function() {
 
-	beforeEach(module('neodym'));
+    var $scope,
+    $q,
+    $httpBackend;
 
-	// contact controller tests
-	beforeEach(inject(function ($rootScope, $controller, _$q_) {
-		$scope = $rootScope.$new();
+    beforeEach(module('neodym'));
 
-		controller = $controller('PluginOverviewController', {
-			'$scope': $scope
-		});
+    beforeEach(inject(function($controller, $rootScope, _$q_, _$httpBackend_) {
 
-		$q = _$q_;
+        $scope = $rootScope.$new();
+        $httpBackend = _$httpBackend_;
 
-	}));
+        controller = $controller('PluginOverviewController', {
+            '$scope': $scope,
+            '$httpBackend': $httpBackend
+        });
 
+        $q = _$q_;
+    }));
 
-	it('Should exist on startup', function () {
-		expect(controller).toBeDefined();
-		expect($scope).toBeDefined();
-	});
-
+    it('should be defined', function() {
+        expect(controller).toBeDefined();
+    });
 });

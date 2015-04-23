@@ -1,16 +1,25 @@
-describe('HomeOverviewController', function(){
-    var scope;
+describe('HomeOverviewController.spec.js', function() {
 
-    // load the controller's module
-    beforeEach(module('neodym.controllers'));
+    var $scope,
+    $q,
+    $httpBackend;
 
-    beforeEach(inject(function($rootScope, $controller) {
-        scope = $rootScope.$new();
-        $controller('HomeOverviewController', {$scope: scope});
+    beforeEach(module('neodym'));
+
+    beforeEach(inject(function($controller, $rootScope, _$q_, _$httpBackend_) {
+
+        $scope = $rootScope.$new();
+        $httpBackend = _$httpBackend_;
+
+        controller = $controller('HomeOverviewController', {
+            '$scope': $scope,
+            '$httpBackend': $httpBackend
+        });
+
+        $q = _$q_;
     }));
 
-    // tests start here
-    it('should have enabled friends to be true', function(){
-        expect(scope.settings.enableFriends).toEqual(true);
+    it('should be defined', function() {
+        expect(controller).toBeDefined();
     });
 });
