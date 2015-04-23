@@ -48,8 +48,8 @@
     "page-cache": false
   },
   "scripts": {
-    "postinstall": "./node_modules/bin/bower install",
-    "test": "./node_modules/bin/karma start --single-run --browsers PhantomJS"
+    "postinstall": "./node_modules/bower/bin/bower install",
+    "test": "./node_modules/karma/bin/karma start --single-run --browsers PhantomJS"
   },
   "keywords": [
     "hybrid",
