@@ -11,7 +11,7 @@ describe('TestingOverviewController', function() {
 		$scope = $rootScope.$new();
 		$httpBackend = _$httpBackend_;
 
-		controller = $controller('TestingOverviewController', {
+		controller = $controller('TestingOverviewControllerController', {
 			'$scope': $scope,
 			'$httpBackend': $httpBackend
 		});

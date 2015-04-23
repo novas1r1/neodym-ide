@@ -9,7 +9,7 @@ module.exports = function(grunt) {
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
         watch: {
-            files: [ "js/**/**/*.js"],
+            files: [ 'js/**/**/*.js'],
             tasks: [ 'browserify' ]
         },
         browserify: {
@@ -17,7 +17,7 @@ module.exports = function(grunt) {
         karma: {
             unit: {
                 configFile: 'karma.conf.js',
-                autoWatch: true,
+                autoWatch: true
             }
         },
         jshint: {

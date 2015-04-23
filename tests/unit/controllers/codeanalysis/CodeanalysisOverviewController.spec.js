@@ -4,14 +4,14 @@ describe('CodeanalysisOverview.spec.js', function() {
 	$q,
 	$httpBackend;
 
-	beforeEach(module('neodym'));
+	beforeEach(module('controllers'));
 
 	beforeEach(inject(function($controller, $rootScope, _$q_, _$httpBackend_) {
 
 		$scope = $rootScope.$new();
 		$httpBackend = _$httpBackend_;
 
-		controller = $controller('CodeanalysisOverview', {
+		controller = $controller('CodeanalysisOverviewController', {
 			'$scope': $scope,
 			'$httpBackend': $httpBackend
 		});
@@ -20,6 +20,6 @@ describe('CodeanalysisOverview.spec.js', function() {
 	}));
 
 	it('should be defined', function() {
-		expect(controller).toBeDefined();
+		expect($scope).toBeDefined();
 	});
 });
