@@ -5,8 +5,11 @@
   "main": "index.html",
   "version": "0.4.0",
   "description": "The neodym IDE helps you to create and manage hybrid apps using Ionic fast and comfortable",
+  "dependencies": {
+    "bower": "^1.4.1",
+    "grunt": "^0.4.5"
+  },
   "devDependencies": {
-    "karma": "^0.12.31",
     "angular-mocks": "^1.3.15",
     "fs.extra": "^1.3.2",
     "grunt-browserify": "^3.7.0",
@@ -19,10 +22,12 @@
     "grunt-node-webkit-builder": "^1.0.2",
     "jasmine-core": "^2.2.0",
     "jshint-html-reporter": "~0.2.3",
+    "karma": "^0.12.31",
     "karma-chrome-launcher": "^0.1.8",
     "karma-coverage": "~0.3",
     "karma-htmlfile-reporter": "~0.1",
     "karma-jasmine": "^0.3.5",
+    "karma-phantomjs-launcher": "*",
     "mkdirp": "^0.5.0",
     "ncp": "^2.0.0",
     "node-webkit-builder": "^1.0.11",
@@ -40,10 +45,6 @@
     "plugin": true,
     "java": true,
     "page-cache": false
-  },
-  "dependencies": {
-    "bower": "^1.4.1",
-    "grunt": "^0.4.5"
   },
   "scripts": {
     "postinstall": "node_modules/.bin/bower install",
