@@ -6,6 +6,7 @@
   "version": "0.4.0",
   "description": "The neodym IDE helps you to create and manage hybrid apps using Ionic fast and comfortable",
   "devDependencies": {
+    "karma": "^0.12.31",
     "angular-mocks": "^1.3.15",
     "fs.extra": "^1.3.2",
     "grunt-browserify": "^3.7.0",
@@ -42,8 +43,7 @@
   },
   "dependencies": {
     "bower": "^1.4.1",
-    "grunt": "^0.4.5",
-    "karma": "^0.12.31"
+    "grunt": "^0.4.5"
   },
   "scripts": {
     "postinstall": "node_modules/.bin/bower install",
@@ -56,8 +56,5 @@
     "ionic",
     "karma",
     "angularjs"
-  ],
-  "directories": {
-    "test": "test"
-  }
+  ]
 }
