@@ -73,6 +73,12 @@ Afterwards you only need to download the .zip package and extract it to your des
 
 This will download all needed dependencies and may take a while. After this is finished you can start the IDE by running the "neodym-ide.exe". 
 
+If you get an issue with bower, please install bower first by:
+
+`npm install -g bower`
+
+... and try to run `npm install` again.
+
 A packaged version will also be available soon after some issues will be fixed. At the moment it takes horribly long to start the packaged version.
 
 ## Dependencies
