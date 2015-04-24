@@ -1,4 +1,4 @@
-develop: ![alt tag](https://travis-ci.org/aaronprojects/neodym-ide.svg?branch=develop)
+develop: [![Build Status](https://travis-ci.org/aaronprojects/neodym-ide.svg?branch=develop)](https://travis-ci.org/aaronprojects/neodym-ide)
 
 # neodym IDE (alpha)
 
