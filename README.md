@@ -1,4 +1,4 @@
-develop: [![Build Status](https://travis-ci.org/aaronprojects/neodym-ide.svg?branch=develop)](https://travis-ci.org/aaronprojects/neodym-ide)
+[![Build Status](https://travis-ci.org/aaronprojects/neodym-ide.svg?branch=master)](https://travis-ci.org/aaronprojects/neodym-ide)
 
 # neodym IDE (alpha)
 
