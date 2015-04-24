@@ -1,3 +1,5 @@
+develop: ![alt tag](https://travis-ci.org/aaronprojects/neodym-ide.svg?branch=develop)
+
 # neodym IDE (alpha)
 
 With the neodym IDE it is possible to easily create app projects using the [Ionic SDK](http://ionicframework.com). A lot of built in and automatically configured tools help to improve your code quality and speed up most of the manual steps coming along with developing an app.
