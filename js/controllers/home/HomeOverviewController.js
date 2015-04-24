@@ -6,8 +6,8 @@
  * Description: This controller handles all functionality coming along with creating new projects, listing and opening them.
  */
 angular.module('neodym.controllers')
-.controller('HomeOverviewController', ['$scope', '$q', '$mdToast', '$mdDialog', 'ProjectService', 'FileService', 'TaskService', 'RepositoryService', '$location', 
-	function($scope, $q, $mdToast, $mdDialog, ProjectService, FileService, TaskService, RepositoryService, $location) {
+.controller('HomeOverviewController', ['$scope', '$q', '$mdToast', 'ProjectService', 'FileService', 'TaskService', 'RepositoryService', '$location', 
+	function($scope, $q, $mdToast, ProjectService, FileService, TaskService, RepositoryService, $location) {
 	
 	// logging
 	var TAG = "HomeOverviewController: ";
@@ -151,30 +151,20 @@ angular.module('neodym.controllers')
 	 * Show dialog for adding components
 	 * @param  {event} ev
 	 */
-	$scope.showImportProjectDialog = function(ev) {
-		console.log(TAG + "showImportProjectDialog");
+	$scope.importProject = function(projectToImport) {
+		console.log(TAG + "importProject");
+		var importedProject = {
+			id: $scope.projects.length + 1,
+			title: projectToImport.title,
+			description: "",
+			path: projectToImport.path,
+			timestamp: new Date(),
+			version: "0.0.1",
+			android: false,
+			ios: false
+		};
 
-		$mdDialog.show({
-			controller: DialogController,
-			templateUrl: 'views/home/importProject_dialog.html',
-			targetEvent: ev,
-		})
-		.then(function (answer) {
-			var importedProject = {
-				id: $scope.projects.length + 1,
-				title: answer.title,
-				description: $scope.project.description,
-				path: answer.path + answer.title,
-				timestamp: new Date(),
-				version: "0.0.1",
-				android: false,
-				ios: false
-			};
-
-			addProjectToConfig(importedProject);
-		}, function() {
-			console.log(TAG + "cancelled");
-		});
+		addProjectToConfig(importedProject);
 	};
 
 	/**
@@ -191,18 +181,3 @@ angular.module('neodym.controllers')
 	};
 	
 }]);
-
-function DialogController($scope, $mdDialog) {
-
-	//dialogs
-	$scope.hide = function() {
-		$mdDialog.hide();
-	};
-	$scope.cancel = function() {
-		$mdDialog.cancel();
-	};
-	$scope.answer = function(answer) {
-		console.log("ADD");
-		$mdDialog.hide(answer);
-  };
-}
