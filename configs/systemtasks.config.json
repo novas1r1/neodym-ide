@@ -5,7 +5,8 @@
         "name": "Start webview",
         "description": "View your app in your browser",
         "systemtask": true,
-        "command": "ionic serve"
+        "command": "ionic serve",
+        "stoppable": true
     },
     {
         "id": 2,
@@ -13,7 +14,8 @@
         "name": "Build android apk",
         "description": "Only possible if android platform was added.",
         "systemtask": true,
-        "command": "ionic run android"
+        "command": "ionic run android",
+        "stoppable": true
     },
     {
         "id": 3,
@@ -21,7 +23,8 @@
         "name": "Update ionic cli",
         "description": "Updates your global ionic cli",
         "systemtask": true,
-        "command": "npm update -g ionic"
+        "command": "npm update -g ionic",
+        "stoppable": true
     },
     {
         "id": 4,
@@ -29,7 +32,8 @@
         "name": "Add android platform",
         "description": "Needed for building android apps",
         "systemtask": true,
-        "command": "cordova platform add android"
+        "command": "cordova platform add android",
+        "stoppable": true
     },
     {
         "id": 5,
@@ -37,7 +41,8 @@
         "name": "Remove android platform",
         "description": "Removes installed android platform",
         "systemtask": true,
-        "command": "cordova platform remove android"
+        "command": "cordova platform remove android",
+        "stoppable": false
     },
     {
         "id": 6,
@@ -45,7 +50,8 @@
         "name": "Add ios platform",
         "description": "Needed for building ios apps. Working on a Mac and using xcode as a requirement.",
         "systemtask": true,
-        "command": "cordova platform add ios"
+        "command": "cordova platform add ios",
+        "stoppable": true
     },
     {
         "id": 7,
@@ -53,7 +59,8 @@
         "name": "Remove ios platform",
         "description": "Removes installed ios platform",
         "systemtask": true,
-        "command": "cordova platform remove ios"
+        "command": "cordova platform remove ios",
+        "stoppable": false
     },
     {
         "id": 8,
@@ -61,6 +68,7 @@
         "name": "Update project dependencies",
         "description": "Updates all project dependencies using 'npm install'",
         "systemtask": true,
-        "command": "npm install"
+        "command": "npm install",
+        "stoppable": true
     }
 ]

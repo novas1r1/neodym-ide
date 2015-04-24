@@ -176,6 +176,17 @@ angular.module('neodym.controllers')
  	};
 
  	/**
+ 	 * Stop the current running task
+ 	 * @param  {task} task 
+ 	 */
+ 	$scope.stopTask = function () {
+ 		console.log(TAG + "stopTask");
+
+ 		TaskService.killTask();
+ 	};
+
+
+ 	/**
  	 * Delete selected task from list and config
  	 * @param  {object} taskToDelete
  	 */

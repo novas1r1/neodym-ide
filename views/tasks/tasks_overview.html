@@ -24,19 +24,22 @@
 		</div>
 	</md-toolbar>
 	<md-list>
-		<md-item ng-repeat="webview in taskList | filter:{platform: 'webview'} track by $index">
+		<md-item ng-repeat="webviewTask in taskList | filter:{platform: 'webview'} track by $index">
 			<div class="fullwidth">
 				<div class="float-right">
-					<md-button class="md-fab md-primary" aria-label="delete" ng-click="deleteTask(webview)" ng-hide="webview.systemtask">
+					<md-button class="md-fab md-primary" aria-label="delete" ng-click="deleteTask(webviewTask)" ng-hide="webviewTask.systemtask">
 			            <md-icon md-svg-src="bower_components/material-design-icons/action/svg/design/ic_delete_24px.svg"></md-icon>
 			        </md-button>
-					<md-button class="md-fab md-primary md-primary" aria-label="run" ladda="runButton" ng-click="runTask(webview)">
+	        		<md-button class="md-fab md-primary md-primary" aria-label="stop" ng-if="webviewTask.stoppable" ng-click="stopTask(webviewTask)">
+	                    <md-icon md-svg-src="bower_components/material-design-icons/av/svg/design/ic_stop_24px.svg"></md-icon>
+	                </md-button>
+					<md-button class="md-fab md-primary md-primary" aria-label="run" ladda="runButton" ng-click="runTask(webviewTask)">
 			            <md-icon md-svg-src="bower_components/material-design-icons/av/svg/design/ic_play_arrow_24px.svg"></md-icon>
 			        </md-button>
 		        </div>
 		        <div>
-					<div class="item-names-double"><strong>{{webview.name}}</strong><br>
-						<span style="font-style:italic; font-size: 14px">{{webview.description}}</span>
+					<div class="item-names-double"><strong>{{webviewTask.name}}</strong><br>
+						<span style="font-style:italic; font-size: 14px">{{webviewTask.description}}</span>
 					</div>
 				</div>
 			</div>
@@ -55,6 +58,9 @@
 			<md-button class="md-fab md-primary" aria-label="delete" ng-click="deleteTask(androidTask)" ng-hide="androidTask.systemtask">
 	            <md-icon md-svg-src="bower_components/material-design-icons/action/svg/design/ic_delete_24px.svg"></md-icon>
 	        </md-button>
+    		<md-button class="md-fab md-primary md-primary" aria-label="stop" ng-if="androidTask.stoppable" ng-click="stopTask()">
+                <md-icon md-svg-src="bower_components/material-design-icons/av/svg/design/ic_stop_24px.svg"></md-icon>
+            </md-button>
 			<md-button class="md-fab md-primary" aria-label="run" ladda="runButton" ng-click="runTask(androidTask)">
 	            <md-icon md-svg-src="bower_components/material-design-icons/av/svg/design/ic_play_arrow_24px.svg"></md-icon>
 	        </md-button>
@@ -79,6 +85,9 @@
 				<md-button class="md-fab md-primary" aria-label="delete" ng-click="deleteTask(iosTask)" ng-hide="iosTask.systemtask">
 		            <md-icon md-svg-src="bower_components/material-design-icons/action/svg/design/ic_delete_24px.svg"></md-icon>
 		        </md-button>
+        		<md-button class="md-fab md-primary md-primary" aria-label="stop" ng-if="iosTask.stoppable" ng-click="stopTask()">
+                    <md-icon md-svg-src="bower_components/material-design-icons/av/svg/design/ic_stop_24px.svg"></md-icon>
+                </md-button>
 				<md-button class="md-fab md-primary" aria-label="run" ladda="runButton" ng-click="runTask(iosTask)">
 		            <md-icon md-svg-src="bower_components/material-design-icons/av/svg/design/ic_play_arrow_24px.svg"></md-icon>
 		        </md-button>
@@ -103,6 +112,9 @@
 				<md-button class="md-fab md-primary" aria-label="delete" ng-click="deleteTask(customTask)" ng-hide="customTask.systemtask">
 		            <md-icon md-svg-src="bower_components/material-design-icons/action/svg/design/ic_delete_24px.svg"></md-icon>
 		        </md-button>
+        		<md-button class="md-fab md-primary md-primary" aria-label="stop" ng-if="deleteTask.stoppable" ng-click="stopTask()">
+                    <md-icon md-svg-src="bower_components/material-design-icons/av/svg/design/ic_stop_24px.svg"></md-icon>
+                </md-button>
 				<md-button class="md-fab md-primary" aria-label="run" ladda="runButton" ng-click="runTask(customTask)">
 		            <md-icon md-svg-src="bower_components/material-design-icons/av/svg/design/ic_play_arrow_24px.svg"></md-icon>
 		        </md-button>

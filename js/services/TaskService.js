@@ -11,6 +11,8 @@ angular.module('neodym.services')
 			var exec = require('child_process').exec;
 			var child_process = require('child_process');
 
+			var currentTask;
+
 			/**
 			 * Executes one task at defined location
 			 * @param  {string} task
@@ -20,7 +22,7 @@ angular.module('neodym.services')
 			var executeTask = function(task, location) {
 				var deferred = $q.defer();
 
-				exec(task, {cwd:location},function (error, stdout, stderr) {
+				currentTask = exec(task, {cwd:location},function (error, stdout, stderr) {
 
 					if(error !== null) {
 						console.log(error);
@@ -68,6 +70,12 @@ angular.module('neodym.services')
 				return deferred.promise;
 			};
 
+			var killTask = function () {
+				console.log(currentTask);
+				
+				currentTask.kill()	
+			};
+
 			return {
 				executeTask: function(task, location) {
 					console.log(TAG + "executeTask");
@@ -79,6 +87,10 @@ angular.module('neodym.services')
 					console.log(TAG + "spawnTask");
 					console.log(task);
 					return spawnTask(task);
+				},
+				killTask: function() {
+					console.log(TAG + "killTask");
+					return killTask();
 				}
 			};
 		}
