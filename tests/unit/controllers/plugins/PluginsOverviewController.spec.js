@@ -11,7 +11,7 @@ describe('PluginOverviewController.spec.js', function() {
         $scope = $rootScope.$new();
         $httpBackend = _$httpBackend_;
 
-        controller = $controller('PluginOverviewController', {
+        controller = $controller('PluginsOverviewController', {
             '$scope': $scope,
             '$httpBackend': $httpBackend
         });

@@ -1,3 +1,0 @@
-describe('TaskOverviewController Testsuite', function () {
-	
-});

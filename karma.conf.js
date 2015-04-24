@@ -17,12 +17,15 @@ module.exports = function(karma) {
     // list of files / patterns to load in the browser
     files: [
         'bower_components/angular/angular.js',
-        'bower_components/angular-animate/angular-animate.js',
         'node_modules/angular-resource/angular-resource.js',
         'node_modules/angular-route/angular-route.js',
+        'bower_components/angular-animate/angular-animate.js',
+        'bower_components/angular-material/angular-material.js',
+        'bower_components/angular-aria/angular-aria.js',
+        'bower_components/angular-ladda/dist/angular-ladda.js',
         'node_modules/angular-mocks/angular-mocks.js',
         
-        'js/lib/xml2json.min.js',
+        // 'js/lib/xml2json.min.js',
 
         'js/**/**/*.js',
         'tests/unit/**/**/*.spec.js',
@@ -70,7 +73,7 @@ module.exports = function(karma) {
 
     // start these browsers
     // available browser launchers: https://npmjs.org/browse/keyword/karma-launcher
-    browsers: ['Chrome'],
+    browsers: ['NodeWebkit'],
 
     // Continuous Integration mode
     // if true, Karma captures browsers, runs the tests and exits

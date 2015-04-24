@@ -1,4 +1,4 @@
-describe('SettingsOverviewController Testsuite', function () {
+describe('TaskOverviewController Testsuite', function () {
 	var $scope,
 	$q,
 	$httpBackend;
@@ -10,7 +10,7 @@ describe('SettingsOverviewController Testsuite', function () {
 	    $scope = $rootScope.$new();
 	    $httpBackend = _$httpBackend_;
 
-	    controller = $controller('SettingsOverviewController', {
+	    controller = $controller('TasksOverviewController', {
 	        '$scope': $scope,
 	        '$httpBackend': $httpBackend
 	    });

@@ -4,7 +4,7 @@ describe('CodeanalysisOverview.spec.js', function() {
 	$q,
 	$httpBackend;
 
-	beforeEach(module('controllers'));
+	beforeEach(module('neodym'));
 
 	beforeEach(inject(function($controller, $rootScope, _$q_, _$httpBackend_) {
 
