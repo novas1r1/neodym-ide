@@ -8,4 +8,4 @@ before_script:
   - sh -e /etc/init.d/xvfb start
   - npm install -g grunt-cli
 notifications:
-email: false
+  email: false
