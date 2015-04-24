@@ -90,7 +90,9 @@
 			<span class="md-flex">Manage existing projects</span>
 		</div>
 	</md-toolbar>
-
+	<!-- import button -->
+	<md-button class="md-raised md-primary" ng-click="showImportProjectDialog()">Import</md-button>
+	
 	<div ng-repeat="project in projects | orderBy:'id' track by $index">
 		<md-whiteframe class="md-whiteframe-z1" layout ng-class="{active: checkIfActive(project) == true}">
 			<div layout="row" layout-margin layout-fill layout-padding>

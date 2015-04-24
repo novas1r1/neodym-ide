@@ -6,8 +6,8 @@
  * Description: This controller handles all functionality coming along with creating new projects, listing and opening them.
  */
 angular.module('neodym.controllers')
-.controller('HomeOverviewController', ['$scope', '$q', '$mdToast','ProjectService', 'FileService', 'TaskService', 'RepositoryService', '$location', 
-	function($scope, $q, $mdToast, ProjectService, FileService, TaskService, RepositoryService, $location) {
+.controller('HomeOverviewController', ['$scope', '$q', '$mdToast', '$mdDialog', 'ProjectService', 'FileService', 'TaskService', 'RepositoryService', '$location', 
+	function($scope, $q, $mdToast, $mdDialog, ProjectService, FileService, TaskService, RepositoryService, $location) {
 	
 	// logging
 	var TAG = "HomeOverviewController: ";
@@ -40,6 +40,28 @@ angular.module('neodym.controllers')
 	    	hideDelay: 6000,
 	    	position: 'bottom right'
 	    });
+	};
+
+	var addProjectToConfig = function(projectToAdd) {
+		ProjectService.addProject(projectToAdd).then(function (result) {
+			console.log(TAG + "project successfully added");
+			$scope.createButton = false;
+			
+			displayAlertBox("success", "Project " + $scope.project.title + " successfully created!");
+			localStorage.currentProjectPath = projectToAdd.path;
+
+			//clear form input
+			$scope.project.title = "";
+			$scope.project.description = "";
+			$scope.project.android = false;
+			$scope.project.ios = false;
+
+			$location.path("/project");
+
+		}, function(failed) {
+			$scope.createButton = false;
+			displayAlertBox("error", "Error creating project " + $scope.project.title);
+		});
 	};
 
 	/**
@@ -114,31 +136,44 @@ angular.module('neodym.controllers')
 					ios: $scope.project.ios
 				};
 
-				ProjectService.addProject(newProject).then(function (result) {
-					console.log(TAG + "project successfully added");
-					$scope.createButton = false;
-					
-					displayAlertBox("success", "Project " + $scope.project.title + " successfully created!");
-					localStorage.currentProjectPath = newProject.path;
-
-					//clear form input
-					$scope.project.title = "";
-					$scope.project.description = "";
-					$scope.project.android = false;
-					$scope.project.ios = false;
-
-					$location.path("/project");
-
-				}, function(failed) {
-					$scope.createButton = false;
-					displayAlertBox("error", "Error creating project " + $scope.project.title);
-				});
+				addProjectToConfig(newProject);
+				
 			}, function (failure) {
 				$scope.createButton = false;
 			});
 		}, function (failure) {
 			$scope.createButton = false;
 			displayAlertBox("error", failure.msg);
+		});
+	};
+
+	/**
+	 * Show dialog for adding components
+	 * @param  {event} ev
+	 */
+	$scope.showImportProjectDialog = function(ev) {
+		console.log(TAG + "showImportProjectDialog");
+
+		$mdDialog.show({
+			controller: DialogController,
+			templateUrl: 'views/home/importProject_dialog.html',
+			targetEvent: ev,
+		})
+		.then(function (answer) {
+			var importedProject = {
+				id: $scope.projects.length + 1,
+				title: answer.title,
+				description: $scope.project.description,
+				path: answer.path + answer.title,
+				timestamp: new Date(),
+				version: "0.0.1",
+				android: false,
+				ios: false
+			};
+
+			addProjectToConfig(importedProject);
+		}, function() {
+			console.log(TAG + "cancelled");
 		});
 	};
 
@@ -156,3 +191,18 @@ angular.module('neodym.controllers')
 	};
 	
 }]);
+
+function DialogController($scope, $mdDialog) {
+
+	//dialogs
+	$scope.hide = function() {
+		$mdDialog.hide();
+	};
+	$scope.cancel = function() {
+		$mdDialog.cancel();
+	};
+	$scope.answer = function(answer) {
+		console.log("ADD");
+		$mdDialog.hide(answer);
+  };
+}
