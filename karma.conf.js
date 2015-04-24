@@ -16,15 +16,18 @@ module.exports = function(karma) {
 
     // list of files / patterns to load in the browser
     files: [
-        
-        'js/lib/angular.min.js',
-        'js/lib/angular-animate.js',
-        'js/lib/angular-resource.min.js',
-        'js/lib/angular-route.min.js',
-        'js/lib/xml2json.min.js',
-        'js/lib/jquery.min.js',
+        'bower_components/angular/angular.js',
+        'node_modules/angular-resource/angular-resource.js',
+        'node_modules/angular-route/angular-route.js',
+        'bower_components/angular-animate/angular-animate.js',
+        'bower_components/angular-material/angular-material.js',
+        'bower_components/angular-aria/angular-aria.js',
+        'bower_components/angular-ladda/dist/angular-ladda.js',
         'node_modules/angular-mocks/angular-mocks.js',
+        
+        // 'js/lib/xml2json.min.js',
 
+        'js/**/**/*.js',
         'tests/unit/**/**/*.spec.js',
     ],
 
@@ -63,14 +66,14 @@ module.exports = function(karma) {
 
     // level of logging
     // possible values: config.LOG_DISABLE || config.LOG_ERROR || config.LOG_WARN || config.LOG_INFO || config.LOG_DEBUG
-    logLevel: karma.LOG_DEBUG,
+    logLevel: karma.LOG_INFO,
 
     // enable / disable watching file and executing tests whenever any file changes
     autoWatch: true,
 
     // start these browsers
     // available browser launchers: https://npmjs.org/browse/keyword/karma-launcher
-    browsers: ['Chrome'],
+    browsers: ['NodeWebkit'],
 
     // Continuous Integration mode
     // if true, Karma captures browsers, runs the tests and exits

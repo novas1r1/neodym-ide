@@ -1,24 +1,24 @@
 describe('SettingsOverviewController Testsuite', function () {
-	var $scope, $q, controller;
+	var $scope,
+	$q,
+	$httpBackend;
 
 	beforeEach(module('neodym'));
 
-	// contact controller tests
-	beforeEach(inject(function ($rootScope, $controller, _$q_) {
-		$scope = $rootScope.$new();
+	beforeEach(inject(function($controller, $rootScope, _$q_, _$httpBackend_) {
 
-		controller = $controller('SettingsOverviewController', {
-			'$scope': $scope
-		});
+	    $scope = $rootScope.$new();
+	    $httpBackend = _$httpBackend_;
 
-		$q = _$q_;
+	    controller = $controller('SettingsOverviewController', {
+	        '$scope': $scope,
+	        '$httpBackend': $httpBackend
+	    });
 
+	    $q = _$q_;
 	}));
 
-
-	it('Should exist on startup', function () {
-		expect(controller).toBeDefined();
-		expect($scope).toBeDefined();
+	it('should be defined', function() {
+	    expect($scope).toBeDefined();
 	});
-
 });
