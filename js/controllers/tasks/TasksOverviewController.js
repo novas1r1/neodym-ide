@@ -196,12 +196,12 @@ angular.module('neodym.controllers')
 
  		var stopIt = false;
 
- 		for (var i = 0; i < $scope.taskList.length && !stopIt; i++) {
- 			if(taskToDelete.id == $scope.taskList[i].id) {
+ 		for (var i = 0; i < userTasksList.length && !stopIt; i++) {
+ 			if(taskToDelete.id == userTasksList[i].id) {
  				stopIt = true;
- 				$scope.taskList.splice(i, 1);
+ 				userTasksList.splice(i, 1);
 
- 				saveConfig(userTasksConfigPath, $scope.taskList).then(function (result) {
+ 				saveConfig(userTasksConfigPath, userTasksList).then(function (result) {
  					console.log(result);
 					$scope.successMessage = "Task '" + taskToDelete.name + "' deleted.";
 					displayAlertBox("success", result.msg);
