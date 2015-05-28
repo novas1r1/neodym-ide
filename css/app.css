@@ -73,9 +73,9 @@ p
     background-color: rgb(55,71,79);
 }
 
-md-icon.active
+ng-md-icon.active
 {
-    color: white;
+    fill: white;
 }
 
 /**
