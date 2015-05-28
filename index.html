@@ -18,7 +18,7 @@
 		    <md-content>
 		      <div ng-repeat="item in items">
                 <button class="menu-item menu-title md-menu-item" ng-class="item.active" ng-click="setActive(item)" md-highlight="menu.isSectionSelected(item)" md-ink-ripple="#bbb">
-                    <ng-md-icon icon="{{item.icon}}" size="30px" ng-class="item.active"></ng-md-icon>
+                    <span class="menu-icon"><ng-md-icon icon="{{item.icon}}" ng-class="item.active"></ng-md-icon></span>
                     <span class="sidemenu-icon-text">{{item.name}}</span>
 		        </button>
 		      </div>

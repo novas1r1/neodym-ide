@@ -32,31 +32,13 @@ p
  */
 .menu-item
 {
-    font-size: inherit;
-    line-height: 40px;
-
-    position: relative;
-    z-index: 1;
-
-    display: block;
-
+    height: 50px;
     width: 100%;
-    max-height: 40px;
-    margin: 0;
     padding: 0 28px;
 
-    cursor: pointer;
-    -webkit-transition: .45s cubic-bezier(.35, 0, .25, 1);
-       -moz-transition: .45s cubic-bezier(.35, 0, .25, 1);
-            transition: .45s cubic-bezier(.35, 0, .25, 1);
-    -webkit-transition-property: max-height, background-color, opacity;
-       -moz-transition-property: max-height, background-color, opacity;
-            transition-property: max-height, background-color, opacity;
     text-align: left;
     text-decoration: none;
 
-    opacity: 1;
-    color: #333;
     border-width: 0;
     outline: none;
     background: none;
@@ -90,6 +72,10 @@ md-whiteframe.active
 md-toast.md-default-theme.md-bottom.md-right
 {
     max-width: 100% !important;
+}
+
+.md-button.md-fab {
+    line-height: 10px;
 }
 
 /**
