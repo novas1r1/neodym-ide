@@ -63,6 +63,14 @@ A testing environment using [Karma](http://karma-runner.github.io/) as the test 
 
 ## Installation
 
+New! Downloading a packaged windows 32 and 64 bit version is now possible:
+
+[neodymIDE-v0.7.0-win32.zip](http://www.neodym-ide.org/wp-content/uploads/2015/05/neodymIDE-v0.7.0-win32.zip)
+
+[neodymIDE-v0.7.0-win64.zip](http://www.neodym-ide.org/wp-content/uploads/2015/05/neodymIDE-v0.7.0-win64.zip)
+
+---
+
 The [Ionic SDK](http://ionicframework.com) has to be successfully installed and configured to use the neodym IDE. If you are not familiar with Ionic, please have a look at its [official documentation](http://ionicframework.com/docs/).
 
 [Node.js](https://nodejs.org/), [npm](https://www.npmjs.com/package/npm) and [Git](http://git-scm.com/) have to be installed as well. If you discover other dependencies which are not mentioned here, please let me know.
