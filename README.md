@@ -66,6 +66,7 @@ A testing environment using [Karma](http://karma-runner.github.io/) as the test 
 New! Downloading a packaged windows 32 and 64 bit version is now possible:
 
 [neodymIDE-v0.7.0-win32.zip](http://www.neodym-ide.org/wp-content/uploads/2015/05/neodymIDE-v0.7.0-win32.zip)
+
 [neodymIDE-v0.7.0-win64.zip](http://www.neodym-ide.org/wp-content/uploads/2015/05/neodymIDE-v0.7.0-win64.zip)
 
 ---
