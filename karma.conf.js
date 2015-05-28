@@ -23,6 +23,7 @@ module.exports = function(karma) {
         'bower_components/angular-material/angular-material.js',
         'bower_components/angular-aria/angular-aria.js',
         'bower_components/angular-ladda/dist/angular-ladda.js',
+        'node_modules/angular-material-icons/angular-material-icons.js',
         'node_modules/angular-mocks/angular-mocks.js',
         
         // 'js/lib/xml2json.min.js',
