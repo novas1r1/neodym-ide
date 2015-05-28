@@ -14,12 +14,12 @@
 		<md-sidenav layout="column" style="overflow: hidden; display: flex;" class="md-sidenav-left md-whiteframe-z2" md-component-id="left" md-is-locked-open="$mdMedia('gt-sm')">
 		    <md-toolbar class="md-primary md-hue-2">
                 <div class="sidemenu-logo"></div>
-                
 		    </md-toolbar>
 		    <md-content>
 		      <div ng-repeat="item in items">
-		        <button class="menu-item menu-title md-menu-item" ng-class="item.active" ng-click="setActive(item)" md-highlight="menu.isSectionSelected(item)" md-ink-ripple="#bbb">
-                    <md-icon md-svg-src="bower_components/material-design-icons/{{item.icon}}" ng-class="item.active" alt="Cake"></md-icon><span class="sidemenu-icon-text">{{item.name}}</span>
+                <button class="menu-item menu-title md-menu-item" ng-class="item.active" ng-click="setActive(item)" md-highlight="menu.isSectionSelected(item)" md-ink-ripple="#bbb">
+                    <span class="menu-icon"><ng-md-icon icon="{{item.icon}}" ng-class="item.active"></ng-md-icon></span>
+                    <span class="sidemenu-icon-text">{{item.name}}</span>
 		        </button>
 		      </div>
               <div class="sidemenu-footer"> 
@@ -50,6 +50,9 @@
     <script type='text/javascript' src="bower_components/ladda/dist/spin.min.js"></script>
     <script type='text/javascript' src="bower_components/ladda/dist/ladda.min.js"></script>
     <script type='text/javascript' src="bower_components/angular-ladda/dist/angular-ladda.min.js"></script>
+
+    <!-- angular material icons -->
+    <script type='text/javascript' src="node_modules/angular-material-icons/angular-material-icons.min.js"></script>
 
     <script type='text/javascript' src="js/lib/xml2json.min.js"></script>
     <!-- END libraries -->

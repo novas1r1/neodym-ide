@@ -6,7 +6,7 @@
  */
 neodym = 
 
-angular.module('neodym', ['ngResource', 'ngRoute', 'ngAnimate', 'ngMaterial', 'angular-ladda', 'neodym.controllers', 'neodym.services', 'neodym.directives', 'neodym.filters'])
+angular.module('neodym', ['ngResource', 'ngRoute', 'ngAnimate', 'ngMaterial', 'ngMdIcons', 'angular-ladda', 'neodym.controllers', 'neodym.services', 'neodym.directives', 'neodym.filters'])
 
 .config(function ($routeProvider, laddaProvider, $mdThemingProvider) {
     laddaProvider.setOption({ 

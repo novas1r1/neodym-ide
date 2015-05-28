@@ -22,6 +22,7 @@
 			<span class="md-flex">Create new project</span>
 		</div>
 	</md-toolbar>
+	
 	<form name="newProjectForm">
 
 		<!-- name -->
@@ -80,17 +81,40 @@
 		<!-- create button -->
 		<md-button class="md-raised md-primary" ladda="createButton" ng-click="createProject()">Create</md-button>
 	</form>
-	</md-content>
+</md-content>
 
-	<md-content class="md-padding">
 
+<md-content class="md-padding">
+	<!-- list existing projects -->
+	<md-toolbar class="md-primary md-hue-2">
+		<div class="md-toolbar-tools">
+			<span class="md-flex">Import an existing project</span>
+		</div>
+	</md-toolbar>
+	<!-- <input type="file" id="fileDialog" onchange="angular.element(this).scope().setImportDirectory(this)" nwdirectory /> -->
+	
+	<!-- name -->
+	<md-input-container>
+		<label>Title</label>
+		<input name="importProjectPath" ng-model="importedProject.title" required>
+	</md-input-container>
+
+	<!-- path -->
+	<md-input-container>
+		<label>Path</label>
+		<input name="importProjectPath" ng-model="importedProject.path" required>
+	</md-input-container>
+	<md-button class="md-raised md-primary" ng-click="importProject(importedProject)">Import</md-button>
+
+</md-content>
+
+<md-content class="md-padding">
 	<!-- list existing projects -->
 	<md-toolbar class="md-primary md-hue-2">
 		<div class="md-toolbar-tools">
 			<span class="md-flex">Manage existing projects</span>
 		</div>
 	</md-toolbar>
-
 	<div ng-repeat="project in projects | orderBy:'id' track by $index">
 		<md-whiteframe class="md-whiteframe-z1" layout ng-class="{active: checkIfActive(project) == true}">
 			<div layout="row" layout-margin layout-fill layout-padding>

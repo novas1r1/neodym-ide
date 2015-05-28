@@ -23,61 +23,61 @@ angular.module('neodym.controllers')
 	$scope.items = [
 	{
 		name: "Home",
-		icon: "action/svg/design/ic_home_24px.svg",
+		icon: "home",
 		active: "active",
 		view: "/home"
 	},
 	{
 		name: "Project",
-		icon: "action/svg/design/ic_info_outline_24px.svg",
+		icon: "info_outline",
 		active: "",
 		view: "/project"
 	},
 	{
 		name: "Settings",
-		icon: "action/svg/design/ic_settings_24px.svg",
+		icon: "settings",
 		active: "",
 		view: "/settings"
 	},
 	{
 		name: "Components",
-		icon: "action/svg/design/ic_list_24px.svg",
+		icon: "list",
 		active: "",
 		view: "/components"
 	},
 	{
 		name: "Tasks",
-		icon: "av/svg/design/ic_play_circle_fill_24px.svg",
+		icon: "play_circle_outline",
 		active: "",
 		view: "/tasks"
 	},
 	{
 		name: "Code Analysis",
-		icon: "action/svg/design/ic_trending_up_24px.svg",
+		icon: "trending_up",
 		active: "",
 		view: "/codeanalysis"
 	},
 	{
 		name: "Libraries",
-		icon: "file/svg/design/ic_folder_shared_24px.svg",
+		icon: "folder_shared",
 		active: "",
 		view: "/libraries"
 	},
 	{
 		name: "Plugins",
-		icon: "file/svg/design/ic_file_upload_24px.svg",
+		icon: "file_upload",
 		active: "",
 		view: "/plugins"
 	},
 	{
 		name: "Testing",
-		icon: "action/svg/design/ic_check_circle_24px.svg",
+		icon: "check_circle",
 		active: "",
 		view: "/testing"
 	},
 	{
 		name: "Release",
-		icon: "file/svg/design/ic_file_upload_24px.svg",
+		icon: "file_upload",
 		active: "",
 		view: "/release"
 	}

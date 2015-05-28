@@ -57,10 +57,10 @@
 			<div class="fullwidth">
 				<div class="float-right">
 					<md-button class="md-fab md-primary" aria-label="install" ladda="installButton" ng-click="installPlugin(newPlugin)">
-			            <md-icon md-svg-src="bower_components/material-design-icons/file/svg/design/ic_file_download_24px.svg"></md-icon>
+						<ng-md-icon icon="download" style="fill: white"></ng-md-icon>
 			        </md-button>
 					<md-button class="md-fab md-primary" aria-label="visit" ng-click="visitPluginPage(newPlugin)">
-			            <md-icon md-svg-src="bower_components/material-design-icons/action/svg/design/ic_info_outline_24px.svg"></md-icon>
+						<ng-md-icon icon="info_outline" style="fill: white"></ng-md-icon>
 			        </md-button>
 		        </div>
 		        <div class="item-names-double"><strong>{{newPlugin.name}}</strong><span class="help-note">({{newPlugin.version}})</span><br>
@@ -78,29 +78,29 @@
 	</div>
 </md-toolbar>
 <md-list>
-		<!-- no plugins installed -->
-		<div class="text-content" ng-show="installedPlugins.length <= 0">
-			<em>No plugins installed</em>
-		</div>
+	<!-- no plugins installed -->
+	<div class="text-content" ng-show="installedPlugins.length <= 0">
+		<em>No plugins installed</em>
+	</div>
 
-		<md-item ng-repeat="plugin in installedPlugins track by $index">
+	<md-item ng-repeat="plugin in installedPlugins track by $index">
 		<div class="fullwidth">
 			<div class="float-right">
 				<md-button class="md-fab md-primary" aria-label="update" ng-if="plugin.update == true" ladda="updateButton" ng-click="updatePlugin(plugin)">
-		            <md-icon md-svg-src="bower_components/material-design-icons/av/svg/design/ic_loop_24px.svg"></md-icon>
+					<ng-md-icon icon="ic_loop" style="fill: white"></ng-md-icon>
 		        </md-button>
 				<md-button class="md-fab md-primary" aria-label="uninstall" ng-click="uninstallPlugin(plugin)" ladda="uninstallButton">
-		            <md-icon md-svg-src="bower_components/material-design-icons/action/svg/design/ic_delete_24px.svg"></md-icon>
+					<ng-md-icon icon="delete" style="fill: white"></ng-md-icon>
 		        </md-button>
         		<md-button class="md-fab md-primary" aria-label="visit" ng-click="visitPluginPage(plugin)">
-                    <md-icon md-svg-src="bower_components/material-design-icons/action/svg/design/ic_info_outline_24px.svg"></md-icon>
+        			<ng-md-icon icon="info_outline" style="fill: white"></ng-md-icon>
                 </md-button>
-		        </div>
-				<div class="item-names-double"><strong>{{plugin.name}}</strong><span class="help-note">({{plugin.version}})</span><br>
-					<span style="font-style:italic; font-size: 14px">{{plugin.description}}</span>
-				</div>
+	        </div>
+			<div class="item-names-double"><strong>{{plugin.name}}</strong><span class="help-note">({{plugin.version}})</span><br>
+				<span style="font-style:italic; font-size: 14px">{{plugin.description}}</span>
 			</div>
-		</md-item>
+		</div>
+	</md-item>
 </md-list>
 <md-content>
 

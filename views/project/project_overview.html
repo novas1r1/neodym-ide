@@ -38,8 +38,8 @@
 	<md-list-item class="md-2-line">
 	<!-- <img src="bower_components/material-design-icons/navigation/svg/design/ic_check_24px.svg" class="md-avatar" alt="" ng-show="dependency.installed"> -->
 	<!-- <img src="bower_components/material-design-icons/navigation/svg/design/ic_close_24px.svg" class="md-avatar" alt="" ng-hide="dependency.installed"> -->
-	<md-icon md-svg-icon="bower_components/material-design-icons/navigation/svg/design/ic_check_24px.svg" ng-if="dependency.installed"></md-icon>
-	<md-icon md-svg-icon="bower_components/material-design-icons/navigation/svg/design/ic_close_24px.svg" ng-if="!dependency.installed"></md-icon>
+	<ng-md-icon icon="check" size="24px" ng-if="dependency.installed"></ng-md-icon>
+	<ng-md-icon icon="close" size="24px" ng-hide="dependency.installed"></ng-md-icon>
 	<div class="md-list-item-text">
 		<h3>{{dependency.name}}</h3>
 		<p>{{dependency.description}}</p>
