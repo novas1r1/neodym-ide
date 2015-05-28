@@ -26,13 +26,6 @@ module.exports = function(grunt) {
                 reporter: require('jshint-html-reporter'),
                 reporterOutput: 'js/misc/reports/jshint-report.html'
             }
-        },
-        nodewebkit: {
-            options: {
-                platforms: ['linux32'],
-                buildDir: './neodym-ide/builds',
-            },
-            src: ['./neodym-ide/**/*']
         }
     });
 
@@ -40,12 +33,10 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-karma');
     grunt.loadNpmTasks('grunt-browserify');
-    grunt.loadNpmTasks('grunt-node-webkit-builder');
 
     grunt.registerTask('browser', ['browserify']);
     grunt.registerTask('analyze', ['jshint']);
     grunt.registerTask('test', ['karma']);
-    grunt.registerTask('build', ['nodewebkit']);
 
     grunt.registerTask('default', ['jshint', 'karma']);
 };
