@@ -30,6 +30,7 @@
     "karma-htmlfile-reporter": "~0.1",
     "karma-jasmine": "^0.3.5",
     "karma-phantomjs-launcher": "*",
+    "karma-nodewebkit-launcher": "0.0.12",
     "mkdirp": "^0.5.1",
     "ncp": "^2.0.0",
     "open": "^0.0.5",
