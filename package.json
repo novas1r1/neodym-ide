@@ -40,8 +40,8 @@
   "window": {
     "toolbar": true,
     "resizable": true,
-    "width": 1920,
-    "height": 1080
+    "width": 1000,
+    "height": 600
   },
   "webkit": {
     "plugin": true,

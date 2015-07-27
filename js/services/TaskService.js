@@ -22,7 +22,10 @@ angular.module('neodym.services')
 			var executeTask = function(task, location) {
 				var deferred = $q.defer();
 
+				console.log(TAG + 'current platform: ' + process.platform);
+
 				currentTask = exec(task, {cwd:location},function (error, stdout, stderr) {
+					console.log(TAG + 'task which was run: ' + task);
 
 					if(error !== null) {
 						console.log(error);
